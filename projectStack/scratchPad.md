@@ -47,11 +47,11 @@ database
 
 -pixel art asset maker for p5 (p5.pixel.js)
 -Wait to visualize the job landscape
-Easy way to show off my side project
+-Easy way to show off my side project
 Platforms that you're dependent on getting acquired
 Create list of big problems
 Portfolio Site
-To Do List App
+-To Do List App
 Shopping List App
 Timeline App
 -Writing Assistant
@@ -62,3 +62,4 @@ LawCode App
 Learning Co-op App
 Drawing Game
 p5 SVG generator
+-minecraft tunnel planner

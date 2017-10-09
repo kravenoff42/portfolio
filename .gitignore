@@ -104,4 +104,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# p5-Manager
+.p5rc
+
 # End of https://www.gitignore.io/api/git,vim,node,windows,firebase

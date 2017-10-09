@@ -1,28 +1,18 @@
-var divCanvas;
-var canvas;
 var divList;
 var ulTodo;
 var maxValue = 25;
-// var rawProjects = [];
-// var archivedProjects = [];
-// var outlinedProjects = [];
-// var todoProjects = [];
 
 function setup() {
-  divCanvas = select('#canvas');
   divList = select('#list');
   ulTodo = select('#todoList');
-	// canvas = createCanvas(600, 600);
-  // canvas.parent(divCanvas);
 
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/pubhtml',
                    callback: function(data, tabletop) {
+                     divList.html("");
                      var archivedProjects = [];
                      var outlinedProjects = [];
                      var todoProjects = [];
-                      //  let rawProjects = data;
-                      //  dataReturned(data);
-                      //  sortProjects(data);
+                      console.log(data);
                        for(let i=0,len=data.length;i<len;i++){
                          if(data[i].Archived=="TRUE"){
                            archivedProjects.push(data[i]);
@@ -34,16 +24,12 @@ function setup() {
                            }
                          }
                        }
+                       console.log(outlinedProjects);
                        getValues(outlinedProjects);
                        getValues(todoProjects);
                        renderTodos(todoProjects);
                        renderOutlined(outlinedProjects);
-                       console.log(data);
-                       console.log("outlined: ",outlinedProjects);
-                       console.log("archived: ",archivedProjects);
-                       console.log("todo list: ",todoProjects);
-                      //  checkAge(data[2].Timestamp);
-                      //  checkDueDate(data[2]['Due Date']);
+
                    },
                    simpleSheet: true } );
   // let seeds = seedData();
@@ -51,12 +37,9 @@ function setup() {
   // let projectValues = getProjectValues(seeds);
   // renderValues(projectValues);
   noLoop();
+  noCanvas();
 
 }
-
-// function draw() {
-//   background(0);
-// }
 
 function dataReturned(rawProjects){
 
@@ -161,8 +144,6 @@ function checkAge(timestamp){
   let dateCreated = new Date(timestamp);
   let today    = new Date();
   let elaspedDays    = dateDiffInDays(dateCreated, today);
-  console.log(dateCreated);
-  console.log(elaspedDays, " days ago");
   if(elaspedDays<180){
     return map(elaspedDays, 0, 180, 1, 2);
   } else{
@@ -183,8 +164,6 @@ function checkDueDate(date){
  let today = new Date();
  let dueDate = new Date(date);
  let remainingDays = dateDiffInDays(today,dueDate);
- console.log(dueDate);
- console.log(remainingDays, " days left");
  if(remainingDays>180){
    return 1;
  }else{
@@ -226,19 +205,43 @@ function renderOutlined(valArray){
   let s = 0;
   for ( let i = 0, len=valArray.length ; i < len ; i ++){
     let value = valArray[i].value;
+    let name = valArray[i]['Project Name'];
+    let dueDate = valArray[i]['Due Date'];
     if(s+value<maxValue){
-      let card = createElement('div',value);
+      //card
+      let randomBG = randomColor();
+      let card = createElement('a');
+      if(valArray[i]['inCollection']=='TRUE'){
+        card.attribute('href','https://kravenoff42.github.io/kravenoffs_kollection/'+name);
+      }else{
+        card.attribute('href','https://github.com/kravenoff42/'+name);
+      }
       card.addClass('outlined');
       card.style('height',(value*1.3 +"em"));
+      card.style('background-color',randomBG);
+
+      //content
+      let pName = createElement('p', name);
+      pName.style('text-align','left');
+      pName.parent(card);
+      let pDueDate = createElement('p', dueDate);
+      pDueDate.style('text-align','right');
+      pDueDate.parent(card);
+
+      //adding to page
       card.parent(divList);
+
       s = s+valArray[i].value;
     }
   }
-
-  let tot = createElement('p',"Total: "+s);
-  tot.parent(divList)
+  // let tot = createElement('p',"Total: "+s);
+  // tot.parent(divList)
 }
 
+function randomColor(){
+return random(["#e6194b","#3cb44b","#ffe119","#0082c8","#f58231",
+    "#911eb4","#d2f53c","#008080","#e6beff","#800000","#000080"]);
+}
 /*
 var currentCol;
 var currentRow;
@@ -255,79 +258,94 @@ function setProjectOutlined(){
 }
 */
 
-function makeApiCall() {
-  var params = {
-    // The ID of the spreadsheet to update.
-    spreadsheetId: '1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg',  // TODO: Update placeholder value.
-    // The A1 notation of the values to update.
-    range: "A2:H1005",  // TODO: Update placeholder value.
-    // How the input data should be interpreted.
-    valueInputOption: 'USER_ENTERED',  // TODO: Update placeholder value.
-  };
+// function makeApiCall() {
+//   var params = {
+//     // The ID of the spreadsheet to update.
+//     spreadsheetId: '1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg',  // TODO: Update placeholder value.
+//     // The A1 notation of the values to update.
+//     range: "A2:H1005",  // TODO: Update placeholder value.
+//     // How the input data should be interpreted.
+//     valueInputOption: 'USER_ENTERED',  // TODO: Update placeholder value.
+//   };
+//
+//   var valueRangeBody = {
+//     // TODO: Add desired properties to the request body. All existing properties
+//     // will be replaced.
+//   };
+//
+//   var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
+//   request.then(function(response) {
+//     // TODO: Change code below to process the `response` object:
+//     console.log(response.result);
+//   }, function(reason) {
+//     console.error('error: ' + reason.result.error.message);
+//   });
+// }
 
-  var valueRangeBody = {
-    // TODO: Add desired properties to the request body. All existing properties
-    // will be replaced.
-  };
-
-  var request = gapi.client.sheets.spreadsheets.values.update(params, valueRangeBody);
-  request.then(function(response) {
-    // TODO: Change code below to process the `response` object:
-    console.log(response.result);
-  }, function(reason) {
-    console.error('error: ' + reason.result.error.message);
-  });
-}
-
-function initClient() {
-  var API_KEY = 'AIzaSyDT5ry6UgDF-cIyVUU1neb6AJKZ2IvJwgQ';
-  var CLIENT_ID = '776723441901-l0okfsnvgm565pfb2jks9ab59o8vmlsk.apps.googleusercontent.com';
-  var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
-
-  gapi.client.init({
-    'apiKey': API_KEY,
-    'clientId': CLIENT_ID,
-    'scope': SCOPE,
-    'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
-  }).then(function() {
-    gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
-    updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-  });
-}
-
-function handleClientLoad() {
-  gapi.load('client:auth2', initClient);
-}
-
-function updateSignInStatus(isSignedIn) {
-  if (isSignedIn) {
-    makeApiCall();
-  }
-}
-
-function handleSignInClick(event) {
-  gapi.auth2.getAuthInstance().signIn();
-}
-
-function handleSignOutClick(event) {
-  gapi.auth2.getAuthInstance().signOut();
-}
+// function initClient() {
+//   var API_KEY = 'AIzaSyDT5ry6UgDF-cIyVUU1neb6AJKZ2IvJwgQ';
+//   var CLIENT_ID = '776723441901-l0okfsnvgm565pfb2jks9ab59o8vmlsk.apps.googleusercontent.com';
+//   var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
+//
+//   gapi.client.init({
+//     'apiKey': API_KEY,
+//     'clientId': CLIENT_ID,
+//     'scope': SCOPE,
+//     'discoveryDocs': ['https://sheets.googleapis.com/$discovery/rest?version=v4'],
+//   }).then(function() {
+//     gapi.auth2.getAuthInstance().isSignedIn.listen(updateSignInStatus);
+//     updateSignInStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+//   });
+// }
+//
+// function handleClientLoad() {
+//   gapi.load('client:auth2', initClient);
+// }
+//
+// function updateSignInStatus(isSignedIn) {
+//   if (isSignedIn) {
+//     makeApiCall();
+//   }
+// }
+//
+// function handleSignInClick(event) {
+//   gapi.auth2.getAuthInstance().signIn();
+// }
+//
+// function handleSignOutClick(event) {
+//   gapi.auth2.getAuthInstance().signOut();
+// }
 
 function renderTodos(valArray){
-  let m = maxValue/2;
   let s = 0;
   for ( let i = 0, len=valArray.length ; i < len ; i ++){
     let value = valArray[i].value;
-    if(s+value<m){
+    let name = valArray[i]['Project Name'];
+    if(s+value<maxValue){
+      //item card
+      let li = createElement('li');
+      li.addClass('todo');
+
+      //check box
+      let sheetLink = createElement('a');
+      sheetLink.attribute('href','https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/edit');
+      let span = createElement('span');
+      span.id('chk_'+name);
       let icon = createElement('i','check_box_outline_blank');
       icon.addClass('material-icons');
-      let span = createElement('span',icon);
-      span.id('chk_'+valArray[i]['Project Name']);
-      let a = createElement('a',valArray[i]['Project Name']);
-      a.attribute('href','https://github.com/kravenoff42/'+valArray[i]['Project Name']);
-      let li = createElement('li',a);
-      li.addClass('todo');
-      li.parent(divList);
+      icon.parent(span);
+      span.parent(sheetLink);
+
+      //link
+      let a = createElement('a',name);
+      a.attribute('href','https://stackedit.io/editor');
+
+      //adding to card
+      sheetLink.parent(li);
+      a.parent(li);
+
+      // adding card to div
+      li.parent(todoList);
       s = s+valArray[i].value;
     }
   }
