@@ -7,7 +7,7 @@ var divCanvas;
 
 function setup(){
   divCanvas = select("#canvas");
-  canvas = createCanvas(700, 700);
+  canvas = createCanvas(600, 600);
   canvas.parent(divCanvas);
   angleMode();
   ship = new Ship();

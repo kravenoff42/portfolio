@@ -67,10 +67,10 @@ function renderThumbnails(projList){
 
     //content
     let pName = createElement('p', name);
-    pName.style('font-weight', 'bold';);
+    pName.style('font-weight', 'bold');
     pName.parent(card);
     let pDesc = createElement('p', desc);
-    pName1.parent(card);
+    pDesc.parent(card);
 
     //adding to page
     card.parent(divGallery);
