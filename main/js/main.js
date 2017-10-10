@@ -3,7 +3,7 @@ var divInProgress;
 var divGallery;
 
 function preload(){
-  p5rc = loadJSON("../main/p5rc.json");
+  // p5rc = loadJSON("../main/p5rc.json");
 }
 
 function setup(){
