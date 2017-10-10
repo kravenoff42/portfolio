@@ -14,6 +14,8 @@ body {
   height: 10vh;
   padding-left: 6px;
   padding-right: 6px;
+  background-repeat: no-repeat;
+  background-position: center;
   border-width: 3px !important;
   border-color: rgba(0, 0, 0, 0) !important;
 }
@@ -21,7 +23,7 @@ body {
   text-decoration: none;
   color: white;
   border-width: 3px !important;
-  border-color: rgba(0, 0, 0, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.7) rgba(0, 0, 0, 0.4) !important;
  }
 .thumbnail p{
   margin: 0;

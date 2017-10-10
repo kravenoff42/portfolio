@@ -65,6 +65,9 @@ function renderThumbnails(projList){
     card.addClass('thumbnail');
     card.style('background-color',randomBG);
 
+    // set image if present
+    card.style('background-image','url("main/img/'+name+'.png")');
+
     //content
     let pName = createElement('p', name);
     pName.style('font-weight', 'bold');

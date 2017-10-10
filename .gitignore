@@ -107,4 +107,8 @@ $RECYCLE.BIN/
 # p5-Manager
 .p5rc
 
+# Personal
+
+scratchPad.md
+
 # End of https://www.gitignore.io/api/git,vim,node,windows,firebase

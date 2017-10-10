@@ -1,7 +1,7 @@
 kravenoffs_kollection
 =====================
 
-> The is a collection of projcts that I have been working on Since 2016. If you are interested in seeing some of my more recent work try checking out the inProgress section,
+> The is a collection of projects that I have been working on Since 2016. If you are interested in seeing some of my more recent work try checking out the inProgress section,
 
 #Jonathan Craven
 ---

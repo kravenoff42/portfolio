@@ -22,10 +22,11 @@ iframe{
   color: white;
   font-weight: bold;
   width: 100%;
-  padding-left: 6px;
+  padding-left: 6px ;
   padding-right: 6px;
   border-width: 3px !important;
   border-color: rgba(0, 0, 0, 0) !important;
+  margin-bottom: 10px !important;
 }
 .outlined:hover {
   text-decoration: none;

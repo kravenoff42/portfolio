@@ -2,6 +2,8 @@
   "name": "kravenoffs_kollection",
   "projects": [
     "projectStack",
-    "asteroids"
+    "asteroids",
+    "minecraft-tunnel-planner",
+    "adrift"
   ]
 }
