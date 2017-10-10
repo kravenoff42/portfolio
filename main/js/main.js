@@ -1,10 +1,5 @@
-// var p5rc;
 var divInProgress;
 var divGallery;
-
-// function preload(){
-//   // p5rc = loadJSON("../main/p5rc.json");
-// }
 
 function setup(){
   noCanvas();
@@ -35,8 +30,6 @@ function setup(){
 
                    },
                    simpleSheet: true } );
-
-  //renderInProgress(p5rc.projects);
 }
 
 function renderInProgress(projList){
@@ -62,20 +55,21 @@ function renderInProgress(projList){
 function renderThumbnails(projList){
   for ( let i = 0, len=projList.length ; i < len ; i ++){
     let name = projList[i]['Project Name'];
+    let desc = projList[i]['Project Description'];
     //card
     let randomBG = randomColor();
     let card = createElement('a');
+    card.attribute('href','https://www.joncraven.com/kravenoffs_kollection/'+name);
     // card.attribute('href','https://kravenoff42.github.io/kravenoffs_kollection/'+name);
-    card.attribute('href','/'+name);
+    // card.attribute('href','/'+name);
     card.addClass('thumbnail');
     card.style('background-color',randomBG);
 
     //content
     let pName = createElement('p', name);
-    pName.style('text-align','left');
+    pName.style('font-weight', 'bold';);
     pName.parent(card);
-    let pName1 = createElement('p', name);
-    pName1.style('text-align','right');
+    let pDesc = createElement('p', desc);
     pName1.parent(card);
 
     //adding to page
