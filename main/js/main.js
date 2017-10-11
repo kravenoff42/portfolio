@@ -35,14 +35,19 @@ function setup(){
 function renderInProgress(projList){
   for ( let i = 0, len=projList.length ; i < len ; i ++){
     let name = projList[i]['Project Name'];
+    let coll = projList[i]['inCollection'];
+
     //item card
     let li = createElement('li');
     li.addClass('proj');
 
     //link
     let a = createElement('a',name);
-    a.attribute('href',name);
-
+    if(coll=='TRUE'){
+      a.attribute('href',name);
+    }else{
+      a.attribute('href','https://github.com/kravenoff42/'+name);
+    }
     //adding to card
     a.parent(li);
 
@@ -56,17 +61,23 @@ function renderThumbnails(projList){
   for ( let i = 0, len=projList.length ; i < len ; i ++){
     let name = projList[i]['Project Name'];
     let desc = projList[i]['Project Description'];
+    let coll = projList[i]['inCollection'];
     //card
     let randomBG = randomColor();
     let card = createElement('a');
-    card.attribute('href','https://www.joncraven.com/kravenoffs_kollection/'+name);
+    if(coll=='TRUE'){
+      card.attribute('href','https://www.joncraven.com/kravenoffs_kollection/'+name);
+    }else{
+      card.attribute('href','https://github.com/kravenoff42/'+name);
+    }
+
     // card.attribute('href','https://kravenoff42.github.io/kravenoffs_kollection/'+name);
     // card.attribute('href','/'+name);
     card.addClass('thumbnail');
     card.style('background-color',randomBG);
 
     // set image if present
-    card.style('background-image','url("main/img/'+name+'.png")');
+    card.style('background-image','url("./main/img/'+name+'.png")');
 
     //content
     let pName = createElement('p', name);
