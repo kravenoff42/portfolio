@@ -4,10 +4,6 @@ body {
   overflow: hidden;
   font-family: 'Montserrat', 'helvetica', sans-serif;
 }
-input{
-  width: 70px;
-}
-#output{
-  /*height:600px;*/
-  margin-top: 10px;
+canvas {
+  margin:auto;
 }

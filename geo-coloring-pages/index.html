@@ -11,47 +11,30 @@
     <link rel="stylesheet" href="../libraries/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 
-  	<title>minecraft-tunnel-planner</title>
+  	<title>geo-coloring-pages</title>
 
   	<script src="../libraries/p5.js"></script>
   	<script src="../libraries/p5.dom.js"></script>
   	<script src="../libraries/p5.sound.js"></script>
     <script src="../libraries/jquery.min.js" ></script>
     <script src="../libraries/bootstrap.min.js" ></script>
+    <script src="classes/Layer.js"></script>
     <script src="sketch.js"></script>
 
   </head>
   <body>
-    <div class="row">
-      <a href="www.joncraven.com">&lt;Kravenoff's Kollection</a>
+    <div class="noPrint">
+      <a href="../index.html">&lt;Kravenoff's Kollection</a>
     </div>
-
-    <div>
-      <h1>>minecraft-tunnel-planner</h1>
+    <div class="noPrint">
+      <h1>>geo-coloring-pages</h1>
     </div>
-    <div class="row">
-      <p>
-      </p>
+    <div id="input" class="noPrint">
+      <button id="printBtn" type="button" name="button" class="btn">Print</button>
+      <input id="updateTxt" type="number" max="20" min="1" value="1" class="form-control"/>
+      <button id="updateBtn" type="button" name="button" class="btn btn-primary">Update</button>
     </div>
-    <div id="input" class="row">
-      <p>
-        Starting Location:</br>
-        X: <input id="startX" type="number" />
-        Y: <input id="startY" type="number" />
-        Z: <input id="startZ" type="number" />
-      </p>
-      <p>
-        Ending Location:</br>
-        X: <input id="endX" type="number" />
-        Y: <input id="endY" type="number" />
-        Z: <input id="endZ" type="number" />
-      </p>
-      <p>
-        <input id="chkIgnoreY" type="checkbox">Ignore Y Axis</input>
-      </p>
-      <button id="btnSubmit" type="submit" name="submit">Submit</button>
-    </div>
-    <div id="output" class="row">
+    <div id="canvas">
 
     </div>
   </body>

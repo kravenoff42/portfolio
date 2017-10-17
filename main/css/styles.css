@@ -11,11 +11,11 @@ body {
 .thumbnail{
   color: white;
   width: 100%;
-  height: 10vh;
+  height: 15vh;
   padding-left: 6px;
   padding-right: 6px;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   border-width: 3px !important;
   border-color: rgba(0, 0, 0, 0) !important;
 }
