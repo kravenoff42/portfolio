@@ -37,7 +37,7 @@ function setup() {
       renderedObjects.push(new OrbitCircle());
       break;
     case 'Collidiscope':
-      let r = floor(random(3,8));
+      let r = floor(random(3,6));
       for(let i = 0; i<r;i++){
         renderedObjects.push(new Collidiscope());
       }

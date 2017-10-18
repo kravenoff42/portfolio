@@ -3,7 +3,7 @@ class Collidiscope {
     this.corners = floor(random(3,13));
     this.radius = random(5,width/4);
     this.shapeAngle = random(TWO_PI);
-    this.sym = sym || random([3,4,6,8,12]);
+    this.sym = sym || random([3,4,6,8]);
     this.orbitRadius = random(width/3);
     this.orbitAngle = random(TWO_PI);;
     this.spin = spin || map(random(),0,1,-0.02,0.02);
