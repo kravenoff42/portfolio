@@ -1,26 +1,20 @@
-class Collidiscope {
+class ShapeZoom {
   constructor(layers,sym,spin,rotation) {
     this.corners = floor(random(3,13));
-    this.radius = random(5,width/4);
+    this.radius = 1;
     this.shapeAngle = random(TWO_PI);
-    this.sym = sym || random([3,4,6,8]);
-    this.orbitRadius = random(width/3);
+    this.sym = sym || 1; //random([3,4,6,8]);
+    this.orbitRadius = 0;
     this.orbitAngle = random(TWO_PI);;
     this.spin = spin || map(random(),0,1,-0.02,0.02);
     this.rotation = rotation || map(random(),0,1,-0.008,0.008);
     this.stroke = colors.rand();
     this.strokeWeight = floor(random(5));
-    this.fill = colors.rand();
-
   }
   show(){
     push();
       translate(width/2,height/2);
-      if(this.radius<30){
-        fill(this.fill);
-      }else{
-        noFill();
-      }
+      noFill();
       stroke(this.stroke);
       strokeWeight(this.strokeWeight);
       for(let j = 1;j<=this.sym+1;j++){
@@ -35,6 +29,8 @@ class Collidiscope {
   update(){
     this.orbitAngle = (this.orbitAngle + this.rotation)%TWO_PI;
     this.shapeAngle = (this.shapeAngle + this.spin)%TWO_PI;
+    this.radius = (this.radius * 1.05)%(width/2);
+    this.orbitRadius = (this.orbitRadius *1.1)%(width/2);
   }
 
   drawShape(x,y,orbAngle){
