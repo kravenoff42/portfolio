@@ -24,21 +24,7 @@ Recent Projects
 
 [View All Repos](https://github.com/kravenoff42)
 
-[![NoContext](images/NoContext.PNG)](https://github.com/kravenoff42/NoContext)
-
-[NoContext](https://github.com/kravenoff42/NoContext)
-
-[![SearchWiki](images/SearchWiki.PNG)](https://github.com/kravenoff42/SearchWiki)
-
-[SearchWiki](https://github.com/kravenoff42/SearchWiki)
-
-[![ListMaker](images/Listmaker.PNG)](https://github.com/kravenoff42/ListMaker)
-
-[ListMaker](https://github.com/kravenoff42/ListMaker)
-
-[![WhatsMyWeather](images/WhatsMyWeather.PNG)](https://github.com/kravenoff42/WhatsMyWeather)
-
-[WhatsMyWeather](https://github.com/kravenoff42/WhatsMyWeather)
+[View My Portfolio](https://www.joncraven.com/portfolio)
 
 ---
 
