@@ -1,12 +1,10 @@
-kravenoffs_kollection
-=====================
+Jonathan Craven
+===============
 
-> The is a collection of projects that I have been working on Since 2016. If you are interested in seeing some of my more recent work try checking out the inProgress section,
-
-#Jonathan Craven
----
 #### Illustrator | Developer | Designer
 >I am a highly motivated and technically minded designer. I have ample experience with self-directed skill acquisition and excellent customer service skills.
+
+> This is a collection of projects that I have been working on Since 2016. If you are interested in seeing some of my more recent work try checking out the inProgress section,
 
 Technical Skills                         |         | Professional Skills
 ---|---|---
