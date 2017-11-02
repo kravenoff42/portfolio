@@ -46,8 +46,8 @@ Education
 ---
 
 #####New England Institute of Technology
-BS Software Engineering
-2016-2018
+AS Software Engineering
+2016-2017
 
 #####Rhode Island College
 BFA Sculpture
