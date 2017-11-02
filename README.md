@@ -40,7 +40,7 @@ Recent Projects
 
 [WhatsMyWeather](https://github.com/kravenoff42/WhatsMyWeather)
 
-===
+---
 
 Education
 ---
@@ -53,7 +53,7 @@ AS Software Engineering
 BFA Sculpture
 2004-2009
 
-===
+---
 
 Work Experience
 ---
