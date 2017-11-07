@@ -56,13 +56,17 @@ canvas{
   padding-right: 32px;
 }
 .completed{
-    padding-left: 16px !important;
+  padding-left: 16px !important;
+}
+#skills{
+  padding-left: 16px !important;
+  background-color: rgb(119,156,171);
 }
 .inProgress{
-    padding-left: 16px !important;
+  padding-left: 16px !important;
 }
 #inProgress{
-    padding-left: 32px !important;
+  padding-left: 32px !important;
 }
 .footer{
   padding-left: 16px !important;

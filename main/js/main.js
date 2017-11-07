@@ -12,7 +12,7 @@ function setup(){
   divFoot = document.querySelector('#divFoot');
   //maxCanvasWidth = document.getElementById("widthRef").clientWidth - 20;
   
-  createCanvas(windowWidth, 300);
+  createCanvas(windowWidth*0.8, 300);
   colors = new Colors();
   
   makeBG(width,0,colors.back,divHead);

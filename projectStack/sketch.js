@@ -212,7 +212,7 @@ function renderOutlined(valArray){
       let randomBG = randomColor();
       let card = createElement('a');
       if(valArray[i]['inCollection']=='TRUE'){
-        card.attribute('href','https://kravenoff42.github.io/kravenoffs_kollection/'+name);
+        card.attribute('href','https://www.joncraven.com/portfolio/'+name);
       }else{
         card.attribute('href','https://github.com/kravenoff42/'+name);
       }
