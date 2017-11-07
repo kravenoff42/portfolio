@@ -1,12 +1,24 @@
 var divInProgress;
 var divGallery;
+var divHead;
+var divFoot;
+var colors;
 
 function setup(){
-  noCanvas();
   noLoop();
   divInProgress = select("#inProgress");
   divGallery = select("#gallery");
-
+  divHead = document.querySelector('#divHead');
+  divFoot = document.querySelector('#divFoot');
+  //maxCanvasWidth = document.getElementById("widthRef").clientWidth - 20;
+  
+  createCanvas(windowWidth, 300);
+  colors = new Colors();
+  
+  makeBG(width,0,colors.back,divHead);
+  makeBG(0,height,colors.trim,divFoot);
+  
+  
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/pubhtml',
                    callback: function(data, tabletop) {
                      divGallery.html("");
@@ -32,6 +44,26 @@ function setup(){
                    simpleSheet: true } );
 }
 
+function makeBG(x,y,back,div){
+  background(back);
+  push();
+  translate(x,y);
+  noFill();
+  strokeWeight(2);
+  let r = floor(random(4,10));
+  let layers = [];
+  for(let j = 0;j<r;j++){
+    layers.push(new Layer());
+  }
+  for(let i = 0, len = layers.length;i<len;i++){
+    layers[i].show();
+  }
+  let embeddedCanvas =  document.querySelector('#defaultCanvas0');
+  let dataUrl = embeddedCanvas.toDataURL();
+  div.style.background = 'url('+dataUrl+')';
+  pop();
+}
+
 function renderInProgress(projList){
   for ( let i = 0, len=projList.length ; i < len ; i ++){
     let name = projList[i]['Project Name'];
@@ -48,7 +80,7 @@ function renderInProgress(projList){
     }else{
       a.attribute('href','https://github.com/kravenoff42/'+name);
     }
-    //adding to card
+    //adding to list
     a.parent(li);
 
     // adding card to div
@@ -74,10 +106,10 @@ function renderThumbnails(projList){
     // card.attribute('href','https://kravenoff42.github.io/kravenoffs_kollection/'+name);
     // card.attribute('href','/'+name);
     card.addClass('thumbnail');
-    card.style('background-color',randomBG);
+    card.style('background-color',colors.rand());
 
     // set image if present
-    card.style('background-image','url("./main/img/'+name+'.png")');
+    card.style('background-image','url("main/img/'+name+'.png")');
 
     //content
     let pName = createElement('p', name);
@@ -93,11 +125,7 @@ function renderThumbnails(projList){
   }
 }
 
-function randomColor(dark){
-  if(dark=='dark'){
-    return random(["#c6002b","#1c9442b","#dfc100","#0062a8","#d56211",
-      "#7110094","#b2d51c","#006060","#c69edf","#600000","#000060"]);
-  }
+function randomColor(){
   return random(["#e6194b","#3cb44b","#ffe119","#0082c8","#f58231",
     "#911eb4","#d2f53c","#008080","#e6beff","#800000","#000080"]);
 }

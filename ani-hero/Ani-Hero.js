@@ -5,24 +5,7 @@ var renderedObjects = [];
 var colors;
 
 function setup() {
-  colors = {
-    back: color(60,30 ,90),
-    prime: color(240,100,100),
-    dark: color(50,10,50),
-    trim: color(50,200,240),
-    rand: function(){
-      switch(random([/*'back',*/'prime','dark','trim'])){
-        case 'back':
-          return this.back;
-        case 'prime':
-          return this.prime;
-        case 'dark':
-          return this.dark;
-        case 'trim':
-          return this.trim;
-      }
-    }
-  };
+  colors = new Colors();
   divHero = select('#ani-hero');
   divInput = select('#input');
 	canvas = createCanvas(windowWidth, windowHeight*0.75);
