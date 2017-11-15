@@ -1,11 +1,12 @@
 {
-  "name": "kravenoffs_kollection",
+  "name": "portfolio",
   "projects": [
     "projectStack",
     "asteroids",
     "minecraft-tunnel-planner",
     "adrift",
     "geo-coloring-pages",
-    "ani-hero"
+    "ani-hero",
+    "my-first-rogue"
   ]
 }
