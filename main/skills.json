@@ -1,0 +1,28 @@
+{
+    "skills":[
+        {"name":"HTML",
+        "level":9},
+        {"name":"CSS",
+        "level":9},
+        {"name":"JavaScript",
+        "level":9},
+        {"name":"Node.js",
+        "level":9},
+        {"name":"React,js",
+        "level":9},
+        {"name":"P5.js",
+        "level":9},
+        {"name":"PHP",
+        "level":9},
+        {"name":"C#",
+        "level":9},
+        {"name":"ASP.NET",
+        "level":9},
+        {"name":"NodeJS",
+        "level":9},
+        {"name":"NodeJS",
+        "level":9},
+        {"name":"NodeJS",
+        "level":9},
+        ]
+}

@@ -47,8 +47,8 @@ canvas{
 }
 .head{
   padding: 16px;
-  background-color: rgb(43,48,58);
-  background-position: right top;
+  background-color: rgb(43,48,58) !important;
+  background-position: right top !important;
   color: #fff;
 }
 #gallery{
@@ -70,8 +70,8 @@ canvas{
 }
 .footer{
   padding-left: 16px !important;
-  background-color: rgb(119,156,171);
-  background-position: left bottom;
+  background-color: rgb(119,156,171) !important;
+  background-position: left bottom !important;
 }
 .footer p{
   color: #fff;
