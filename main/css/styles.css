@@ -49,6 +49,7 @@ canvas{
   padding: 16px;
   background-color: rgb(43,48,58) !important;
   background-position: right top !important;
+  background-size: contain !important;
   color: #fff;
 }
 #gallery{
@@ -72,6 +73,7 @@ canvas{
   padding-left: 16px !important;
   background-color: rgb(119,156,171) !important;
   background-position: left bottom !important;
+  background-size: contain !important;
 }
 .footer p{
   color: #fff;
