@@ -2,7 +2,14 @@ var divInProgress;
 var divGallery;
 var divHead;
 var divFoot;
+var divSkills;
 var colors;
+var json;
+
+function preload(){
+  let path = './main/skills.json';
+  json = loadJSON(path);
+}
 
 function setup(){
   noLoop();
@@ -10,7 +17,13 @@ function setup(){
   divGallery = select("#gallery");
   divHead = document.querySelector('#divHead');
   divFoot = document.querySelector('#divFoot');
-  //maxCanvasWidth = document.getElementById("widthRef").clientWidth - 20;
+  divSkills = document.querySelector('#divSkills');
+
+  let skills = json.skills;
+  
+  for(let i = 0, len = skills.length; i<len; i++){
+    renderSkillBar(skills[i]);
+  }
   
   createCanvas(windowWidth*0.8, 300);
   colors = new Colors();
@@ -22,7 +35,6 @@ function setup(){
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/pubhtml',
                    callback: function(data, tabletop) {
                      divGallery.html("");
-                     console.log(data);
                      var archivedProjects = [];
                      var inProgProjects = [];
                      var todoProjects = [];
@@ -128,4 +140,25 @@ function renderThumbnails(projList){
 function randomColor(){
   return random(["#e6194b","#3cb44b","#ffe119","#0082c8","#f58231",
     "#911eb4","#d2f53c","#008080","#e6beff","#800000","#000080"]);
+}
+
+function renderSkillBar(skill,total){
+  let name = skill.name;
+  let level = skill.level;
+  let totalWidth = 90;
+  let levelWidth = (level*100)/10;
+  
+  let lblName = createElement('span');
+  lblName.html(name);
+  let divTotal = createElement('div');
+  divTotal.style('width',totalWidth+'%');
+  divTotal.class('total');
+  let divLevel = createElement('div');
+  divLevel.style('width',levelWidth+'%');
+  divLevel.class('level');
+  divLevel.parent(divTotal);
+  
+  lblName.parent(divSkills);
+  divTotal.parent(divSkills);
+  
 }

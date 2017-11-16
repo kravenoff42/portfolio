@@ -59,7 +59,7 @@ canvas{
 .completed{
   padding-left: 16px !important;
 }
-#skills{
+#divSkills{
   padding-left: 16px !important;
   background-color: rgb(119,156,171);
 }
@@ -93,4 +93,15 @@ a{
 }
 .center{
   text-align: center;
+}
+.total, .level{
+  height: 1em;
+}
+.total{
+  /*display: inline;*/
+  background-color: rgb(139,176,191);
+  margin-bottom: 16px;
+}
+.level{
+  background-color:  rgb(103,60,79);
 }
