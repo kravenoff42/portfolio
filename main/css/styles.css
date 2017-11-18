@@ -61,7 +61,7 @@ canvas{
 }
 #divSkills{
   padding-left: 16px !important;
-  background-color: rgb(119,156,171);
+  background-color: rgb(149,186,201);
 }
 .inProgress{
   padding-left: 16px !important;
@@ -99,9 +99,9 @@ a{
 }
 .total{
   /*display: inline;*/
-  background-color: rgb(139,176,191);
+  background-color: rgb(159,196,211);
   margin-bottom: 16px;
 }
 .level{
-  background-color:  rgb(103,60,79);
+  background-color:  rgb(119,156,171);
 }
