@@ -1,47 +1,49 @@
-
+var pQuote;
+var pAuth;
+var currentQuote;
 
 $(document).ready(function(){
-  var currentQuote="";
-
-	$("#button").click(function(currentQuote){
-    $.ajax({
-      url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=famous',
-      type: 'POST', // The HTTP Method
-      data: {}, // Additional parameters here
-      datatype: 'json',
-      success: function(data,currentQuote) {
-
-        var obj = $.parseJSON(data);
-
-        var rawquote=obj.quote;
-
-        var quoteArr= rawquote.split(' ');
-        var chop= Math.floor(quoteArr.length/2.5);
-        var temp= quoteArr.slice(Math.floor(Math.random()*chop), quoteArr.length-Math.floor(Math.random()*chop));
-        var misquote=temp.join(' ');
-        var author=obj.author;
-        $("#quote").text('"...'+misquote+'..."');
-        $("#speaker").text("-"+obj.author+' (Sort of)');
-        currentQuote='"...'+ misquote +'..." -'+ author +' (Sort of)';
-        console.log(currentQuote);
-
-      },
-      error: function(err) { alert(err); },
-      beforeSend: function(xhr) {
-      xhr.setRequestHeader('X-Mashape-Authorization', 'cqHXUJnBr2msh0tlL06vUMpjyTI3p1Cuqpyjsn48IBVtfWMBoT');
-      }
-    });
+  
+  $("#button").click(function(){
+  Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/pubhtml',
+                   callback: function(data, tabletop) {
+                     let quotes = data.quotes.elements;
+                     let len = quotes.length-1;
+                     let quoteIndex = Math.floor(Math.random()*len);
+                     let quote = quotes[quoteIndex];
+                     let text = quote.text;
+                     let textArr = text.split(" ");
+                     
+                     let arrLen = textArr.length;
+                     let startRange1 = arrLen*0.2;
+                     let startRange2 = arrLen*0.4;
+                     let endRange1 = arrLen*0.6;
+                     let endRange2 = arrLen*0.8;
+                     
+                     let startIndex = Math.round(startRange1+Math.random()*startRange2);
+                     let endIndex = Math.round(endRange1+Math.random()*endRange2);
+                     
+                     let snip = "..." + textArr.slice(startIndex,endIndex).join(" ") + "...";
+                     let auth = "-"+quote.author+" (sort of)";
+                    // console.log(snip);
+                    // console.log(auth);
+                    $("#pQuote").text(snip);
+                    $("#pAuth").text(auth);
+                    currentQuote = snip + " " + auth;
+                    console.log(currentQuote);
+                   },
+                  }
+                );
   });
+
 
   $("#link").click(function(){
     console.log(currentQuote);
-      if (currentQuote!=""){
+      if (currentQuote){
         $(this).attr("href", "http://twitter.com/home?status="+ currentQuote);
-        return false;
-      }
-      if (currentQuote == ""){
+      }else if (!currentQuote){
         $(this).attr("href", "http://twitter.com/home?status=Check out -No Context- a cool new quote generator!");
-        return false;
       }
+      //$(this).click();
   });
 });
