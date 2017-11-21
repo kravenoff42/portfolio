@@ -121,15 +121,18 @@ function renderThumbnails(projList){
     card.style('background-color',colors.rand());
 
     // set image if present
-    card.style('background-image','url("main/img/'+name+'.png")');
+    card.style('background-image','url("main/img/' + name + '\.PNG")');
 
+    let divContent = createElement('div');
+    divContent.addClass('contentCard');
     //content
     let pName = createElement('p', name);
     pName.style('font-weight', 'bold');
-    pName.parent(card);
+    pName.parent(divContent);
     let pDesc = createElement('p', desc);
-    pDesc.parent(card);
+    pDesc.parent(divContent);
 
+    divContent.parent(card);
     //adding to page
     card.parent(divGallery);
 

@@ -19,28 +19,7 @@ canvas{
 .center{
   text-align: center;
 }
-.thumbnail{
-  color: white;
-  width: 100%;
-  height: 15vh;
-  padding-left: 6px;
-  padding-right: 6px;
-  background-repeat: no-repeat;
-  background-position: right;
-  border: 0;
-  box-shadow: 0 4px 10px -2px #444;
-}
-.thumbnail:hover {
-  text-decoration: none;
-  color: white;
-  border: 0;
-  box-shadow: 0 14px 20px -7px #444;
-  transform: translateY(-10px);
-  transition: all .4s ease-in-out;
- }
-.thumbnail p{
-  margin: 0;
-}
+
 .proj{
   list-style: none;
   vertical-align: middle;
@@ -52,13 +31,7 @@ canvas{
   background-size: 100% auto !important;
   color: #fff;
 }
-#gallery{
-  padding-left: 32px;
-  padding-right: 32px;
-}
-.completed{
-  padding-left: 16px !important;
-}
+
 #divSkills{
   padding-left: 16px !important;
   background-color: rgb(149,186,201);
@@ -104,4 +77,49 @@ a{
 }
 .level{
   background-color:  rgb(119,156,171);
+}
+#gallery{
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.completed{
+  padding-left: 16px !important;
+}
+.thumbnail{
+  color: white;
+  width: 100%;
+  height: 15vh;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  border:0;
+  box-shadow: 0 4px 10px -2px #444;
+}
+.thumbnail:hover {
+  border: 0;
+  text-decoration: none;
+  box-shadow: 0 14px 20px -7px #444;
+  transform: translateY(-10px);
+  transition: all .4s ease-in-out;
+ }
+.thumbnail p{
+  margin: 0;
+}
+.contentCard, .contentCard a{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0);
+  color: rgba(255,255,255,0);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.contentCard:hover{
+  background-color: rgba(0,0,0,0.5);
+  color: rgba(255,255,255,1);
+  transition: all .4s ease-in-out;
+}
+.contentCard:hover a {
+  color: rgba(255,255,255,1);
+  transition: all .4s ease-in-out;
 }
