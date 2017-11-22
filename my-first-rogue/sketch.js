@@ -1,7 +1,6 @@
 var divCanvas;
 var canvas;
 var divInput;
-//var gameObjects = [];
 var player;
 var GRID_SIZE = 16;
 var running = true;
@@ -56,15 +55,7 @@ function keyReleased(){
 function getInput() {
   let step = false;
   if(frameCount%4===0){step = true;}
-  if (keyIsDown(87) && step) {//w
-    if(player.dir == 3 && !player.collision(player.col,player.row-1)){
-      //grid.move(player.col,player.row,player.col,player.row-1);
-      //player.row--;
-      player.move();
-    }else{
-      player.dir = 3;
-    }
-  } else if (keyIsDown(68) && step) {//d
+  if (keyIsDown(68) && step) {//d
     if(player.dir == 0 && !player.collision(player.col+1,player.row)){
       //grid.move(player.col,player.row,player.col+1,player.row);
       // player.col++;
@@ -88,7 +79,16 @@ function getInput() {
     }else{
       player.dir = 2;
     }
-  }
+  }else if (keyIsDown(87) && step) {//w
+    if(player.dir == 3 && !player.collision(player.col,player.row-1)){
+      //grid.move(player.col,player.row,player.col,player.row-1);
+      //player.row--;
+      player.move();
+    }else{
+      player.dir = 3;
+    }
+  } 
+  
   
 }
 

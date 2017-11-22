@@ -10,8 +10,10 @@ function Grid (_cols,_rows){
 }
 
 Grid.prototype.occupied = function(targetCol,targetRow){
-    // console.log("checking if element is occupied: ");
-    // console.log(this.objects[targetCol][targetRow]);
+    let maxCols = (width / GRID_SIZE)-1;
+    let maxRows = (height / GRID_SIZE)-1;
+    
+    if(targetCol == 0||targetCol == maxCols||targetRow==0||targetRow==maxRows){return true;}
     if(this.objects[targetCol][targetRow]!=null){
         return true;
     }
@@ -80,17 +82,12 @@ Grid.prototype.getType = function(){
     return null;
 }
 Grid.prototype.move = function(currCol,currRow,targetCol,targetRow){
-    // if(){
-    //     return false;
-    // }else 
-    if (!this.occupied(targetCol,targetRow)){
-        this.objects[currCol][currRow].col = targetCol;
+    if (this.occupied(targetCol,targetRow)){
+        return;
+    }
+    this.objects[currCol][currRow].col = targetCol;
         this.objects[currCol][currRow].row = targetRow;
         let tempObj = this.objects[currCol][currRow];
         this.objects[currCol][currRow] = null;
         this.objects[targetCol][targetRow] = tempObj;
-    }
-    // else{
-    //     return;
-    // }
 }

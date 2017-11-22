@@ -34,26 +34,29 @@ function setup(){
   
   Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1M-jY0VpUFAd7wHvhmSwAqWvgc9iWdtcHwqkg0awjsWg/pubhtml',
                    callback: function(data, tabletop) {
+                     let projects = data.projects.elements;
+                     console.log();
                      divGallery.html("");
                      var archivedProjects = [];
                      var inProgProjects = [];
                      var todoProjects = [];
-                       for(let i=0,len=data.length;i<len;i++){
-                         if(data[i].Archived=="TRUE"){
-                           archivedProjects.push(data[i]);
+                       for(let i=0,len=projects.length;i<len;i++){
+                         if(projects[i].Archived=="TRUE"){
+                           archivedProjects.push(projects[i]);
                          }else{
-                           if(data[i].hasOutline=="TRUE"){
-                             inProgProjects.push(data[i]);
+                           if(projects[i].hasOutline=="TRUE"){
+                             inProgProjects.push(projects[i]);
                            } else {
-                             todoProjects.push(data[i]);
+                             todoProjects.push(projects[i]);
                            }
                          }
                        }
                        renderInProgress(inProgProjects);
                        renderThumbnails(archivedProjects);
 
-                   },
-                   simpleSheet: true } );
+                   }
+    
+  });
 }
 
 function makeBG(x,y,back,div){

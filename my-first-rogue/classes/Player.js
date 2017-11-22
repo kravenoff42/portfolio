@@ -71,15 +71,16 @@ Player.prototype.move = function(){
     
     let currCol = this.col;
     let currRow = this.row;
-    
+    if(currCol == 0||currCol == maxCols||currRow==0||currRow==maxRows){return;}
+
     let targetCol;
     let targetRow;
     
     switch(this.dir){
         case 0:
             //this.col++;
-            targetCol = currCol;
-            targetRow = currRow-1;
+            targetCol = currCol+1;
+            targetRow = currRow;
             break;
         case 1:
             // grid.move(this.col,this.row,this.col,this.row+1);
@@ -95,15 +96,13 @@ Player.prototype.move = function(){
             break;
         case 3:
             // grid.move(this.col,this.row,this.col,this.row-1);
-            targetCol = currCol+1;
-            targetRow = currRow;
+            targetCol = currCol;
+            targetRow = currRow-1;
            //this.row--;
             break;
-        
     }
-    if(targetCol > maxCols){targetCol = maxCols}
-    if(targetCol < 0){targetCol = 0}
-    if(targetRow > maxRows){targetRow = maxRows}
-    if(targetRow < 0){targetRow = 0}
+    // if(targetCol < 0){targetCol = 0}
+    // if(targetRow > maxRows){targetRow = maxRows}
+    // if(targetRow < 0){targetRow = 0}
     grid.move(currCol,currRow,targetCol,targetRow);
 }
