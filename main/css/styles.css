@@ -106,13 +106,17 @@ a{
 .thumbnail p{
   margin: 0;
 }
-.contentCard, .contentCard a{
+.contentCard{
   height: 100%;
   width: 100%;
+  padding: 16px;
+}
+.contentCard, .contentCard a{
   background-color: rgba(0,0,0,0);
   color: rgba(255,255,255,0);
-  padding-left: 6px;
-  padding-right: 6px;
+}
+.contentCard p, .contentCard a{
+  padding-bottom: 8px;
 }
 .contentCard:hover{
   background-color: rgba(0,0,0,0.5);
