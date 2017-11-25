@@ -13,7 +13,7 @@ Grid.prototype.occupied = function(targetCol,targetRow){
     let maxCols = (width / GRID_SIZE)-1;
     let maxRows = (height / GRID_SIZE)-1;
     
-    if(targetCol == 0||targetCol == maxCols||targetRow==0||targetRow==maxRows){return true;}
+    if(targetCol < 0||targetCol > maxCols||targetRow < 0||targetRow > maxRows){return;}
     if(this.objects[targetCol][targetRow]!=null){
         return true;
     }
@@ -34,10 +34,8 @@ Grid.prototype.placeEnemies = function(){
         for(let j = 0;j<cols;j++){
             if(random()<ENEMY_DENSITY && !this.occupied(j,i)){
                 this.objects[j][i] = new BasicEnemy(j,i,"ENEMY");
-                return;
             }
         }
-        return;
     }
 }
 Grid.prototype.placePlayer = function(p){

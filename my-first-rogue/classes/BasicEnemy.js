@@ -3,11 +3,16 @@ function BasicEnemy(_col,_row,_type,_dir){
     this.row = _row;
     this.type = _type;
     this.dir = _dir || 0;
-    this.attack = 1;
+    this.attackDmg = 1;
     this.health = 1;
     this.attacking = false;
     this.deciding = true;
     this.moving = false;
+    this.target = {};
+        this.target.col;
+        this.target.row;
+    this.setTarget();
+
 }
 
 BasicEnemy.prototype.update = function(){
@@ -45,29 +50,27 @@ BasicEnemy.prototype.render = function(){
     pop();
 }
 
-BasicEnemy.prototype.edge = function(){
-    let maxCols = (width / GRID_SIZE)-1;
-    let maxRows = (height / GRID_SIZE)-1;
+// BasicEnemy.prototype.edge = function(){
+//     let maxCols = (width / GRID_SIZE)-1;
+//     let maxRows = (height / GRID_SIZE)-1;
     
-    if(this.col > maxCols){this.col = maxCols}
-    if(this.col < 0){this.col = 0}
-    if(this.row > maxRows){this.row = maxRows}
-    if(this.row < 0){this.row = 0}
-}
+//     if(this.col > maxCols){this.col = maxCols}
+//     if(this.col < 0){this.col = 0}
+//     if(this.row > maxRows){this.row = maxRows}
+//     if(this.row < 0){this.row = 0}
+// }
 
-BasicEnemy.prototype.collision = function(targetCol,targetRow){
-    for(let i = 0, len = gameObjects.length;i<len;i++){
-        if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow){
-            return true;
-        }
-    }
-    return false;
-}
+// BasicEnemy.prototype.collision = function(targetCol,targetRow){
+//     for(let i = 0, len = gameObjects.length;i<len;i++){
+//         if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
 BasicEnemy.prototype.attack = function(){
-    for(let i = 0, len = gameObjects.length;i<len;i++){
-        if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow && gameObjects[i].type =="PLAYER"){
-            gameObjects[i].damage(this.attack);
-        }
+    if(grid.occupied(this.target.col,this.target.row),grid.getType == "PLAYER"){
+        grid.objects[this.target.col][this.target.row].damage(this.attackDmg);
     }
 }
 BasicEnemy.prototype.damage = function(dmgDealt){
@@ -80,56 +83,48 @@ BasicEnemy.prototype.die = function(){
     
 }
 BasicEnemy.prototype.move = function(){
-    //console.log("enemy will move from "+(this.col)+", "+this.row);
-    let maxCols = (width / GRID_SIZE)-1;
-    let maxRows = (height / GRID_SIZE)-1;
-    
-    let currCol = this.col;
-    let currRow = this.row;
-    
-    let targetCol;
-    let targetRow;
-    
-    switch(this.dir){
-        case 0:
-            //this.col++;
-            targetCol = currCol;
-            targetRow = currRow-1;
-            break;
-        case 1:
-            // grid.move(this.col,this.row,this.col,this.row+1);
-            targetCol = currCol;
-            targetRow = currRow+1;
-            //this.row++;
-            break;
-        case 2:
-            // grid.move(this.col,this.row,this.col-1,this.row);
-            targetCol = currCol-1;
-            targetRow = currRow;
-            //this.col--;
-            break;
-        case 3:
-            // grid.move(this.col,this.row,this.col,this.row-1);
-            targetCol = currCol+1;
-            targetRow = currRow;
-           //this.row--;
-            break;
-        
-    }
-    if(targetCol > maxCols){targetCol = maxCols}
-    if(targetCol < 0){targetCol = 0}
-    if(targetRow > maxRows){targetRow = maxRows}
-    if(targetRow < 0){targetRow = 0}
-    
-    //console.log("targeting: "+targetCol+", "+targetRow);
-    grid.move(currCol,currRow,targetCol,targetRow);
+    this.setTarget();
+    grid.move(this.col,this.row,this.target.col,this.target.row);
 }
-BasicEnemy.prototype.decide = function(targetCol,targetRow){
+BasicEnemy.prototype.decide = function(){
     // for(let i = 0, len = gameObjects.length;i<len;i++){
     //     if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow && gameObjects[i].type =="PLAYER"){
             
     //     }
     // }
     this.dir = random([0,1,2,3]);
-    console.log("enemy has chosen "+this.dir);
+    this.setTarget();
+    
+}
+
+BasicEnemy.prototype.setTarget = function(){
+    let maxCols = (width / GRID_SIZE)-1;
+    let maxRows = (height / GRID_SIZE)-1;
+
+    let targetCol;
+    let targetRow;
+    switch(this.dir){
+        case 0:
+            if(this.col == maxCols){return;}
+            targetCol = this.col+1;
+            targetRow = this.row;
+            break;
+        case 1:
+            if(this.row == maxRows){return;}
+            targetCol = this.col;
+            targetRow = this.row+1;
+            break;
+        case 2:
+            if(this.col == 0){return;}
+            targetCol = this.col-1;
+            targetRow = this.row;
+            break;
+        case 3:
+            if(this.row == 0){return;}
+            targetCol = this.col;
+            targetRow = this.row-1;
+            break;
+    }
+    if(targetCol){this.target.col = targetCol;}
+    if(targetRow){this.target.row = targetRow;}
 }
