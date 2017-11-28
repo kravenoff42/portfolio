@@ -21,6 +21,7 @@
     <script src="classes/Grid.js"></script>
     <script src="classes/Wall.js"></script>
     <script src="classes/BasicEnemy.js"></script>
+    <script src="classes/Maps.js"></script>
     <script src="classes/Player.js"></script>
     <script src="sketch.js"></script>
 
@@ -33,11 +34,21 @@
     <div>
       <h1>>my-first-rogue</h1>
     </div>
-    <div id="canvas">
-
-    </div>
-    <div id="input">
-
+    <div class="container">
+      <div class="row justify-content-around">
+        <div id="divScore" class="col-sm-2">
+          <span>Score: </span><span id="score"></span>
+        </div>
+        <div id="divHealth" class="col-sm-2 text-right">
+          <span id="healthBar"></span>
+        </div>
+      </div>
+      <div id="canvas">
+  
+      </div>
+      <div id="input">
+        
+      </div>
     </div>
   </body>
 </html>

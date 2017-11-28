@@ -12,15 +12,18 @@ function BasicEnemy(_col,_row,_type,_dir){
         this.target.col;
         this.target.row;
     this.setTarget();
-
+    this.value = 10;
 }
 
 BasicEnemy.prototype.update = function(){
-    if(frameCount%15==0){
+    if(frameCount%30==0){
         if(this.deciding){
             this.decide();
             this.deciding = false;
-            this.moving = true;
+        }else if(this.attacking){
+            this.attack();
+            this.attacking = false;
+            this.deciding = true;
         }else if(this.moving){
             this.move();
             this.moving = false;
@@ -32,69 +35,53 @@ BasicEnemy.prototype.update = function(){
 BasicEnemy.prototype.render = function(){
     let x = this.col * GRID_SIZE;
     let y = this.row * GRID_SIZE;
-    let r = GRID_SIZE/2;
+    let half = GRID_SIZE/2;
+    let small = GRID_SIZE*0.75;
+    let smaller = GRID_SIZE/8;
     push();
-        translate(x+r,y+r);
+        translate(x+half,y+half);
         rotate(HALF_PI*this.dir);
         fill(200,0,0);
         ellipseMode(CENTER);
         ellipse(0,0,GRID_SIZE*0.75,GRID_SIZE*0.75);
-        fill(255);
-        ellipse(r/2,0,r/2,r/2);
-        rectMode(CORNER);
+        
         if(this.attacking){
-            rect(0,-r+2,GRID_SIZE,2);
-            rect(0,2,GRID_SIZE,2);
-            rect(0,r-2,GRID_SIZE,2);
+            console.log("swipe")
+            rectMode(CORNER);
+            rect(0,-half+smaller,GRID_SIZE,smaller);
+            rect(0,-smaller/2,GRID_SIZE,smaller);
+            rect(0,half-(2*smaller),GRID_SIZE,smaller);
         }
+        fill(255);
+        ellipse(half/2,0,half/2,half/2);
     pop();
 }
 
-// BasicEnemy.prototype.edge = function(){
-//     let maxCols = (width / GRID_SIZE)-1;
-//     let maxRows = (height / GRID_SIZE)-1;
-    
-//     if(this.col > maxCols){this.col = maxCols}
-//     if(this.col < 0){this.col = 0}
-//     if(this.row > maxRows){this.row = maxRows}
-//     if(this.row < 0){this.row = 0}
-// }
-
-// BasicEnemy.prototype.collision = function(targetCol,targetRow){
-//     for(let i = 0, len = gameObjects.length;i<len;i++){
-//         if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow){
-//             return true;
-//         }
-//     }
-//     return false;
-// }
 BasicEnemy.prototype.attack = function(){
-    if(grid.occupied(this.target.col,this.target.row),grid.getType == "PLAYER"){
+    if(grid.getType(this.target.col,this.target.row) == "PLAYER"){
         grid.objects[this.target.col][this.target.row].damage(this.attackDmg);
     }
 }
 BasicEnemy.prototype.damage = function(dmgDealt){
     this.health -= dmgDealt;
+    if(this.health<=0){player.score += this.value;}
 }
 BasicEnemy.prototype.heal = function(){
     this.health++;
-}
-BasicEnemy.prototype.die = function(){
-    
 }
 BasicEnemy.prototype.move = function(){
     this.setTarget();
     grid.move(this.col,this.row,this.target.col,this.target.row);
 }
 BasicEnemy.prototype.decide = function(){
-    // for(let i = 0, len = gameObjects.length;i<len;i++){
-    //     if(gameObjects[i].col == targetCol && gameObjects[i].row == targetRow && gameObjects[i].type =="PLAYER"){
-            
-    //     }
-    // }
     this.dir = random([0,1,2,3]);
     this.setTarget();
-    
+    if(grid.getType(this.target.col,this.target.row)=="PLAYER"){
+        console.log("enemy sees player")
+        this.attacking = true;
+    }else{
+        this.moving = true;
+    }
 }
 
 BasicEnemy.prototype.setTarget = function(){
@@ -105,26 +92,30 @@ BasicEnemy.prototype.setTarget = function(){
     let targetRow;
     switch(this.dir){
         case 0:
-            if(this.col == maxCols){return;}
+            if(this.col == maxCols){break;}
             targetCol = this.col+1;
             targetRow = this.row;
             break;
         case 1:
-            if(this.row == maxRows){return;}
+            if(this.row == maxRows){break;}
             targetCol = this.col;
             targetRow = this.row+1;
             break;
         case 2:
-            if(this.col == 0){return;}
+            if(this.col == 0){break;}
             targetCol = this.col-1;
             targetRow = this.row;
             break;
         case 3:
-            if(this.row == 0){return;}
+            if(this.row == 0){break;}
             targetCol = this.col;
             targetRow = this.row-1;
             break;
     }
-    if(targetCol){this.target.col = targetCol;}
-    if(targetRow){this.target.row = targetRow;}
+    if(targetCol){
+        this.target.col = targetCol;
+    }else{this.target.col = -1}
+    if(targetRow){
+        this.target.row = targetRow;
+    }else{this.target.row = -1}
 }

@@ -1,19 +1,24 @@
 var divCanvas;
 var canvas;
 var divInput;
+var score;
 var player;
-var GRID_SIZE = 16;
+var GRID_SIZE = 24;
 var running = true;
 var cols;
 var rows;
 var grid;
-const DENSITY = 0.25;
-const ENEMY_DENSITY = DENSITY/4;
+const DENSITY = 0.15;
+const ENEMY_DENSITY = DENSITY/3;
+var level =0;
+var healthBar;
 
 function setup() {
   divCanvas = select('#canvas');
   divInput = select('#input');
-	canvas = createCanvas(400, 400);
+  score = select('#score');
+  healthBar = select("#healthBar");
+	canvas = createCanvas(480, 480);
   canvas.parent(divCanvas);
   
   rows = height / GRID_SIZE;
@@ -33,14 +38,17 @@ function draw() {
   noStroke();
   // getInput();
   
+  if(running){
+  grid.clearDead();  
   grid.update();
+  grid.checkGameState();
   grid.render();
-  // for (var obj in grid.objects) {
-  //   grid.objects[obj].update();
-  //   grid.objects[obj].render();
-  // }
+  }else{
+    gameOver();
+  }
   
-  
+  renderScore();
+  renderPlayerHealth();
 }
 
 function keyPressed(){
@@ -57,43 +65,37 @@ function keyReleased(){
   }
 }
 
-
-function getInput() {
-  // let step = false;
-  // if(frameCount%4===0){step = true;}
-  // if (keyIsDown(68) && step) {//d
-  //   if(player.dir == 0){
-  //     player.move();
-  //   }else{
-  //     player.dir = 0;
-  //   }
-  // }else if (keyIsDown(83) && step) {//s
-  //   if(player.dir == 1){
-  //     player.move();
-  //   }else{
-  //     player.dir = 1;
-  //   }
-  // }else if (keyIsDown(65) && step) {//a
-  //   if(player.dir == 2){
-  //     player.move();
-  //   }else{
-  //     player.dir = 2;
-  //   }
-  // }else if (keyIsDown(87) && step) {//w
-  //   if(player.dir == 3){
-  //     player.move();
-  //   }else{
-  //     player.dir = 3;
-  //   }
-  //} 
-  
-  
-}
-
 function mousePressed(){
-  
+  player.swinging = true;
 }
 
 function mouseReleased(){
-  
+  player.swinging = false;
+}
+function gameOver(){
+  translate(width/2,height/2);
+  textAlign(CENTER);
+  textSize(20);
+  fill(255);
+  textStyle(BOLD);
+  textFont('Courier New');
+  text("Game Over",0,0);
+  translate(0,20);
+  if(grid.playerCount>grid.enemyCount){
+    text("You Won!",0,0);
+  }else{
+    text("You Died",0,0);
+  }
+  translate(0,20);
+  text("Score: "+player.score,0,0);
+}
+function renderScore(){
+  score.html(player.score);
+}
+function renderPlayerHealth(){
+  let hp = "";
+  for (let i =0;i<player.health;i++ ) {
+    hp += "+";
+  }
+  healthBar.html(hp);
 }
