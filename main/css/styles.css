@@ -79,11 +79,11 @@ a{
   background-color:  rgb(119,156,171);
 }
 #gallery{
-  /*padding-left: 32px;*/
-  /*padding-right: 32px;*/
+  padding-left: 32px;
+  padding-right: 32px;
 }
 .completed{
-  /*padding-left: 16px !important;*/
+  padding-left: 16px !important;
 }
 .thumbnail{
   color: white;
@@ -91,7 +91,7 @@ a{
   /*max-width: 316px;*/
   /*margin-right: 16px !important;*/
   height: 15vh;
-  /*padding: 0;*/
+  padding: 0;
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover !important;
@@ -107,9 +107,9 @@ a{
  }
 
 .contentCard{
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*padding: 16px;*/
+  height: 100%;
+  width: 100%;
+  padding: 16px;
 }
 .contentCard, .contentCard a{
   background-color: rgba(0,0,0,0);

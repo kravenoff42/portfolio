@@ -111,6 +111,10 @@ function renderThumbnails(projList){
     let coll = projList[i]['inCollection'];
     //card
     let randomBG = randomColor();
+    let gutter = createElement('div');
+    gutter.addClass('col-sm-6');
+    gutter.addClass('col-xs-12');
+
     let card = createElement('a');
     if(coll=='TRUE'){
       card.attribute('href','http://www.joncraven.com/portfolio/'+name);
@@ -118,8 +122,8 @@ function renderThumbnails(projList){
       card.attribute('href','https://github.com/kravenoff42/'+name);
     }
 
-    card.addClass('col-sm-6');
-    card.addClass('col-xs-12');
+    // card.addClass('col-sm-6');
+    // card.addClass('col-xs-12');
     card.addClass('thumbnail');
     card.style('background-color',colors.rand());
 
@@ -127,7 +131,7 @@ function renderThumbnails(projList){
     card.style('background-image','url("main/img/' + name + '\.PNG")');
 
     let divContent = createElement('div');
-    divContent.addClass('col-md-12');
+    // divContent.addClass('col-md-12');
     divContent.addClass('contentCard');
     //content
     let pName = createElement('p', name);
@@ -137,8 +141,8 @@ function renderThumbnails(projList){
 
     divContent.parent(card);
     //adding to page
-    card.parent(divGallery);
-
+    card.parent(gutter);
+    gutter.parent(divGallery);
 
   }
 }
