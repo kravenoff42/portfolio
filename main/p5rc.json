@@ -1,5 +1,5 @@
 {
-  "name": "kravenoffs_kollection",
+  "name": "portfolio",
   "projects": [
     "projectStack",
     "asteroids",
@@ -7,6 +7,7 @@
     "adrift",
     "geo-coloring-pages",
     "ani-hero",
-    "my-first-rogue"
+    "my-first-rogue",
+    "bury-your-dead"
   ]
 }

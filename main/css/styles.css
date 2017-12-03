@@ -1,10 +1,10 @@
 body {
   font-family: 'Montserrat', 'helvetica', sans-serif;
   width: 80%;
-/*   height:100vh; */
   margin-left: 10%;
   background-color: #fff;
 }
+
 html{
   background-color: rgb(127,85,125);
 }
@@ -79,20 +79,22 @@ a{
   background-color:  rgb(119,156,171);
 }
 #gallery{
-  padding-left: 32px;
-  padding-right: 32px;
+  /*padding-left: 32px;*/
+  /*padding-right: 32px;*/
 }
 .completed{
-  padding-left: 16px !important;
+  /*padding-left: 16px !important;*/
 }
 .thumbnail{
   color: white;
-  width: 100%;
+  /*width: 100%;*/
+  /*max-width: 316px;*/
+  /*margin-right: 16px !important;*/
   height: 15vh;
-  padding: 0;
+  /*padding: 0;*/
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: cover;
+  background-size: cover !important;
   border:0;
   box-shadow: 0 4px 10px -2px #444;
 }
@@ -103,13 +105,11 @@ a{
   transform: translateY(-10px);
   transition: all .4s ease-in-out;
  }
-.thumbnail p{
-  margin: 0;
-}
+
 .contentCard{
-  height: 100%;
-  width: 100%;
-  padding: 16px;
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*padding: 16px;*/
 }
 .contentCard, .contentCard a{
   background-color: rgba(0,0,0,0);
@@ -117,6 +117,9 @@ a{
 }
 .contentCard p, .contentCard a{
   padding-bottom: 8px;
+}
+.contentCard p:first-child{
+  font-weight: bold;
 }
 .contentCard:hover{
   background-color: rgba(0,0,0,0.5);
@@ -126,4 +129,26 @@ a{
 .contentCard:hover a {
   color: rgba(255,255,255,1);
   transition: all .4s ease-in-out;
+}
+
+@media (max-width: 990px){
+  body {
+    width: 100%;
+    margin-left: 0;
+  }
+  .thumbnail{
+    max-width: auto;
+    min-height: 15vh;
+    
+  }
+  .contentCard, .contentCard a{
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(255,255,255,1);
+  }
+  /*.contentCard:hover{*/
+    
+  /*}*/
+  /*.contentCard:hover a {*/
+    
+  /*}*/
 }
