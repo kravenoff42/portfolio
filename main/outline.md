@@ -1,4 +1,4 @@
-kravenoffs_kollection
+portfolio
 =================
 
 Outline
@@ -20,7 +20,7 @@ Outline
 ## Overview
 > **What's the basic idea?**
 
-Kravenoff's Kollection is a dynamically updated list of Completed and In-Progress projects that I am working on. As I add new projects to my list and enter older projects into the system the gallery will update itself to display link to everything.
+My Portfolio is a dynamically updated list of Completed and In-Progress projects that I am working on. As I add new projects to my list and enter older projects into the system the gallery will update itself to display link to everything.
 
 ## Audience
 > **Who is this meant for?**
