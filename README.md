@@ -22,7 +22,6 @@ Wireframes                          | 2 years | Level headed under stress
 Prototyping                         | 1 years | Always punctual
 
 Recent Projects
-
 ---
 
 [View All Repos](https://github.com/kravenoff42)
