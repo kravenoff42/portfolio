@@ -1,7 +1,5 @@
 Jonathan Craven
-
 ===============
-
 
 #### Developer | Designer | Software Engineer
 
