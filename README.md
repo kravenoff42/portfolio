@@ -7,35 +7,20 @@ Jonathan Craven
 
 >My drive to learn has taken me down many avenues. In every challenge that I face I always bring a positive perspective, a kind attitude, and an open mind. I always strive to master the tools I use and endeavor to help my peers do the same. Now I want to find a home; a place that needs my talents where I can make a difference.
 
-
 Technical Skills                    |         | Professional Skills
-
 ---|---|---
-
 HTML / Pug                          | 5 years | Software debugging
-
 CSS / Sass                          | 2 year  | Graphics editing
-
 JavaScript / jQuery                 | 3 year  | Proactive problem solver
-
 Bootstrap                           | 2 year  | Quickly learn & apply new skills
-
 C++ / C#                            | 2 year  | Well organized and detail oriented
-
 Illustrator / Photoshop / InDesign  | 6 years | Open to constructive criticism
-
 ASP.NET / .NET Core                 | 1 year  | Experienced Tutor (Over 300hrs)
-
 P5.js / Processing                  | 2 years | Excellent communicator
-
 React.js          		              | 1 years | Designing Business logic
-
 Node.js / PHP                       | 2 years | Software documentation
-
 SQL / MySQL                         | 2 years | Successful in fast paced environments and meets deadlines
-
 Wireframes                          | 2 years | Level headed under stress
-
 Prototyping                         | 1 years | Always punctual
 
 Recent Projects
