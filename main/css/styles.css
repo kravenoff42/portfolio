@@ -31,7 +31,13 @@ canvas{
   background-size: 100% auto !important;
   color: #fff;
 }
-
+#sayHi{
+  text-align: right;
+}
+#sayHi a{
+  margin-top: 21px;
+  margin-bottom: 10.5px;
+}
 #divSkills{
   padding-left: 16px !important;
   background-color: rgb(149,186,201);
@@ -135,9 +141,9 @@ a{
   }
   .thumbnail{
     height: auto;
-    
+
     min-height: 15vh;
-    
+
   }
   .contentCard, .contentCard a{
     color: rgba(255,255,255,1);
@@ -148,9 +154,9 @@ a{
     background-color: rgba(0,0,0,0.5);
   }
   /*.contentCard:hover{*/
-    
+
   /*}*/
   /*.contentCard:hover a {*/
-    
+
   /*}*/
 }
