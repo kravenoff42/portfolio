@@ -1,0 +1,245 @@
+{
+  "list-maker": {
+    "datecreated": "2016-01-16",
+    "projectdescription": "A proof of concept for a to do app, inspired by a Codecademy challenge.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "no-context": {
+    "datecreated": "2016-01-28",
+    "projectdescription": "A quote generator made for one of the <a href=\"https://www.freecodecamp.org/kravenoff42\">Free Code Camp</a> projects.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "search-wiki": {
+    "datecreated": "2016-02-29",
+    "projectdescription": "This is an interface for Wikipedia using there API, made for one of the <a href=\"https://www.freecodecamp.org/kravenoff42\">Free Code Camp</a> projects.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "whats-my-weather": {
+    "datecreated": "2016-04-30",
+    "projectdescription": "This is a webpage that shows you the current weather using the open weather API and the flickr API for images. This was made for one of the <a href=\"https://www.freecodecamp.org/kravenoff42\">Free Code Camp</a> projects.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain",
+    "isarchived": 0,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "adrift": {
+    "datecreated": "2017-10-03",
+    "projectdescription": "A \"RAFT\" clone in space with an isometric view.",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain",
+    "isarchived": 0,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "teaching-exchange": {
+    "datecreated": "2017-10-03",
+    "projectdescription": "A market place app to trading tutoring sessions, using hours as currency.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Working with Others, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "p5-pixel-js": {
+    "datecreated": "2017-10-04",
+    "projectdescription": "Pixel art asset making library to extend p5.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Working with Others, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  },
+  "job-view": {
+    "datecreated": "2017-10-04",
+    "projectdescription": "A way to visualize the job landscape, and tweak parameters according you your skills and desired career parameters.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "kravenoffs_kollection": {
+    "datecreated": "2017-10-07",
+    "projectdescription": "Adding a landing page for my projects visible from gh-pages.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Prerequisite, Personal Tool",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 0
+  },
+  "project-backlog": {
+    "datecreated": "2017-10-07",
+    "projectdescription": "A backlog of the world toughest technical problems and steps to solve them.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Working with Others, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "minecraft-tunnel-planner": {
+    "datecreated": "2017-10-07",
+    "projectdescription": "A simple app that lets you plan out a tunnel that will land precisely where you need it.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "p5-svg-gen": {
+    "datecreated": "2017-10-07",
+    "projectdescription": "A SVG creation interface that works with p5.svg.js",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Working with Others, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  },
+  "asteroids": {
+    "datecreated": "2017-10-08",
+    "projectdescription": "An Asteroids clone made in p5.js.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "timeline-writer": {
+    "datecreated": "2017-10-10",
+    "projectdescription": "A simple interface for writing a narrative in timeline format, or creating a timeline for an existing narrative.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  },
+  "tweet-shirts": {
+    "datecreated": "2017-10-10",
+    "projectdescription": "A twitter bot that runs sentiment analysis on trending tweets and selective highly positive of highly negative topics and generates t-shirt designs based on the associated hashtag.",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "code-namer": {
+    "datecreated": "2017-10-10",
+    "projectdescription": "A small app that taps into the word-nik API to generate a list of code-names that will be alphabetical and thematically related, to make it easy to name projects and their proceeding generations",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  },
+  "verata-codex": {
+    "datecreated": "2017-10-10",
+    "projectdescription": "A Natural language Processing script that analyzes and categorizes laws and bills. making it easier to interpret laws and translate them to machine readable forms as well as other lanuages.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Prerequisite, Working with Others",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "doodle-app": {
+    "datecreated": "2017-10-10",
+    "projectdescription": "A small app that has a UI for drawing in the canvas hopefully to be used in some kind of game in the future.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain, Prerequisite, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  },
+  "geo-coloring-pages": {
+    "datecreated": "2017-10-12",
+    "projectdescription": "A small algorithm for generating coloring pages for my daughter.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain, Personal Tool",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "ani-hero": {
+    "datecreated": "2017-10-14",
+    "projectdescription": "A widget for storing several visual animations made in p5.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain, Prerequisite, Personal Tool",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "vanNeumannSim": {
+    "datecreated": "2017-10-27",
+    "projectdescription": "A 2D sim of your life as a Van Neumann Probe Control AI, loosely based on the Bobiverse Series by Dennis E. Taylor.",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "MineCode": {
+    "datecreated": "2017-10-27",
+    "projectdescription": "A Minecraft mod that help visualize and gameify coding concepts, where player mine raw code to craft programs.",
+    "duedate": "NULL",
+    "multipliers": "Interesting Domain, Working with Others, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "cost-of-living": {
+    "datecreated": "2017-10-29",
+    "projectdescription": "A budgeting software that takes in your yearly income a breaks down a budget based on your monthly costs, and allows you to weight you preferences for spending.",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain, Prerequisite, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "my-first-rogue": {
+    "datecreated": "2017-11-12",
+    "projectdescription": "A pretty simple rogue-like game that I built in JS.",
+    "duedate": "NULL",
+    "multipliers": "Easily Completed, Interesting Domain, Prerequisite, Personal Tool",
+    "isarchived": 1,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "blog": {
+    "datecreated": "2017-11-12",
+    "projectdescription": "This is my obligatory blog for post my thoughts on life and coding.",
+    "duedate": "2017-11-30",
+    "multipliers": "Easily Completed, Prerequisite, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 0
+  },
+  "bury-your-dead": {
+    "datecreated": "2017-11-15",
+    "projectdescription": "A top-down adventure where you are an underkeeper defending yourself against and re-burying zombies.",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 1,
+    "incollection": 1
+  },
+  "code-clicker": {
+    "datecreated": "2017-12-17",
+    "projectdescription": "An idle clicker game with a software theme, one click is one line of code, and you automate with AI",
+    "duedate": "NULL",
+    "multipliers": "Easily Monetized, Interesting Domain, Personal Tool",
+    "isarchived": 0,
+    "hasoutline": 0,
+    "incollection": 1
+  }
+}

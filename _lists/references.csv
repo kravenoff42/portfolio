@@ -1,0 +1,56 @@
+id,fname,lname,phone,email,position,currentOrganization,metWhere,relationship,Software?,lastConfirmedRef,yearMet,yearsKnown,description
+1,James,Bianco,401-741-4963,JBianco@neit.edu,Adjunct Professor,New England Institute of Technology,New England Institute of Technology,Former Professor,TRUE,2018-04-20,2016,3,"Name: James Bianco
+Phone: 4017414963
+Email: JBianco@neit.edu
+Adjunct Professor at New England Institute of Technology
+Former Professor"
+2,Yan,Sim,401-369-3959,yan@yansim.com,Supply Chain & Business Operations,Warby Parker,Decor Craft Inc,Former Co-Worker,FALSE,2018-04-21,2015,4,"Name: Yan Sim
+Phone: 4013693959
+Email: yan@yansim.com
+Supply Chain & Business Operations at Warby Parker
+Former Co-Worker (Decor Craft Inc)"
+3,Ben,Tigano,508-916-0240,ben@embracehomeloans.com,Lead Developer,Embrace Home Loans,Embrace Home Loans,Former Manager,TRUE,,2018,1,"Name: Ben Tigano
+Phone: 5089160240
+Email: ben@embracehomeloans.com
+Lead Developer at Embrace Home Loans
+Former Manager"
+4,Ryan,Klingler,401-474-0257,ryan.klingler@cox.com,Tech Support Manager,Cox Communications Inc,Cox Communications Inc,Former Manager,FALSE,,2017,2,"Name: Ryan Klingler
+Phone: 4014740257
+Email: ryan.klingler@cox.com
+Tech Support Manager at Cox Communications Inc
+Former Manager"
+5,Tyler,Corwin,401-714-8826,TyDCorwin@gmail.com ,Junior Web Developer,Figmints Digital Creative Marketing,New England Institute of Technology,Former Classmate,TRUE,2018-09-12,2016,3,"Name: Tyler Corwin
+Phone: 4017148826
+Email: TyDCorwin@gmail.com 
+Junior Web Developer at Figmints Digital Creative Marketing
+Former Classmate (New England Institute of Technology)"
+6,Kyle,Fontaine,401-651-5243,kyle.fontaine3@gmail.com,DevOps Engineer,Shyhook,New England Institute of Technology,Former Classmate,TRUE,2018-09-06,2016,3,"Name: Kyle Fontaine
+Phone: 4016515243
+Email: kyle.fontaine3@gmail.com
+DevOps Engineer at Shyhook
+Former Classmate (New England Institute of Technology)"
+7,Heather,Auxier,401-318-4914,hkiselica@gmail.com,Team Leader,Teespring,Teespring,Former Manager,FALSE,,2014,5,"Name: Heather Auxier
+Phone: 4013184914
+Email: hkiselica@gmail.com
+Team Leader at Teespring
+Former Manager"
+8,Barbara,Neri,401-353-5600,barbarni@yahoo.com,Technology Coordinator,North Providence Public Library,North Providence Public Library,Former Superior,FALSE,,2013,6,"Name: Barbara Neri
+Phone: 4013535600
+Email: barbarni@yahoo.com
+Technology Coordinator at North Providence Public Library
+Former Superior"
+9,Matt,Ramirez,,mramirez@seczetta.com,Lead Developer,SecZetta,SecZetta,Former Superior,TRUE,,2019,1,"Name: Matt Ramirez
+Phone: 
+Email: mramirez@seczetta.com
+Lead Developer at SecZetta
+Former Superior"
+10,Aaron,Beck,203-233-3716,abeck@seczetta.com,Professional Services Engineer,SecZetta,SecZetta,Former Co-Worker,TRUE,,2019,1,"Name: Aaron Beck
+Phone: 2032333716
+Email: abeck@seczetta.com
+Professional Services Engineer at SecZetta
+Former Co-Worker"
+11,Blake,Charbonneau,508-642-8172,bcharbonneau@seczetta.com,Software Architect,SecZetta,SecZetta,Former Manager,TRUE,,2019,1,"Name: Blake Charbonneau
+Phone: 5086428172
+Email: bcharbonneau@seczetta.com
+Software Architect at SecZetta
+Former Manager"

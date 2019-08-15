@@ -1,0 +1,106 @@
+id,company,jobTitle,description,shortDesc,startDate,endDate,startPay,endPay,referenceName,referenceID,lastConfirmedRef,address,phone,tags
+20,SecZetta,Professional Services Engineer,"- Documented bug for development team
+- Generated product documentation for end users.
+- Screened and addressed customer questions and feedback.
+- Implemented user documentation Jekyll website.
+- Tested new features and bug fixes for release.
+- Implemented customer configuration requirements proprietary identity management suite. 
+- Trained customers in general product use and administration.
+- Resolved technical conflicts with customer networks and environments.
+- Generated training and internal reference material for various internal processes.","Worked in several capacities to maintain, development, test, and implement an Enterprise level third party identity management suite using Ruby on Rails and MySQL.",2019-02-20,null,"$65,000.00",null,Matt Ramirez,null,null,"221 3rd St, Newport, RI 02840",781-832-0767,prototypes
+19,Embrace Home Loans,Application Developer,"-Worked on multiple software development projects using the .NET framework
+-Ensured software standards followed company directives and provided technical support during testing and deployment of applications 
+-Created technical documents to describe the implementation of specifications
+-Worked on projects including web UI, win UI, and controller design and development, and SOA design and development.
+-Worked with business system analysts, and various end-users to thoroughly define business requirements and test software
+-Designed, coded and tested components to make systems that are cost-effective, scalable, high performance, and reusable","Worked as a part of a small developer team to fulfill business requests and maintain the proprietary mortgage lending software that was built on top of Empower.NET. The key technologies used were C#, Win Forms, and ASP.NET in Visual Studio, Team Foundation Server, and Outlook.",2018-05-21,2018-07-13,"$43,000.00","$43,000.00",Ben Tigano,3,,"25 Enterprise Center, Middletown, RI 02842",800-333-3004,-Prepared samples for shipment
+18,Self-Employed,Freelance Web Developer,-,,2018-07-15,null,$0.00,$0.00,null,null,null,"1 High Service Ave, Apt 206, North Providence, RI 02911",401-719-6104,-
+17,Cox Communications Inc,Cox Business Tech Support Tier 1,"-Provided expert level troubleshooting on Telephone, Internet, and Video Services.
+-Assisted customers with online security and backup services.
+-Investigated both software and hardware level problems, using creative problem solving and critical thinking.
+-Wrote troubleshooting documentation for many products for future use.
+-Assisted with the launch and maintenance of customer websites.
+-Consulted with customers on proper network configuration, and maintenance.
+-Exercised High level of resourcefulness, in high-pressure situations.","Provided directed customer support for business customers have technical issues with their Video, Internet and Phone services, and funneling higher level issue to the appreciate departments. Some key skill used were, troubleshooting, customer service, time management / tracking, and communication.",2017-01-16,2018-05-10,$22.50,$23.15,Ryan Klingler,,,"9 James P Murphy Ind Hwy, West Warwick, RI 02893",401-383-6100,
+16,Squadlocker Inc,Production Designer,"-Vectorized customer designs.
+-Redesigned customer images to comply with Silk-Screen printing standards.
+-Altered customer designs with last minute Corrections.
+-Quality Control for both color and printable",,2016-08-22,2016-10-14,$17.00,$17.00,null,null,null,"240 Bald Hill Rd, Warwick, RI 02886",888-885-6253,
+15,Hasbro Inc,Sample Room Coordinator ,"-Organized sensitive and proprietary materials and prototypes
+-Prepared samples for shipment
+-Cataloged samples for archival
+-Disposed of obsolete or discontinued samples","Managed and maintained the product prototypes for internal company use. Prepped samples for shipment to other offices / departments. Disposed of sample when no longer needed. Key skills used were inventory management, shipping, request fulfilment, and time management.",2016-04-26,2016-04-28,$16.00,$16.00,null,null,null,"1027 Newport Ave, Pawtucket, RI 02862.",401-431-8697,
+14,Decor Craft Inc,Website Manager,"-Facilitated the launch of DCI’s new retail website.
+-Consolidated the web hosting environments.
+-Helped design and create new training tools.
+-Documented technical structure and function of key infrastructures. (ie. Phones, Servers, Retail Process, On-site Inventory)
+-Learned how to organize a project and meet deadlines.","Worked with an outside vendor to complete the launch and transition to a new integrated retail website. Supported other department with various projects including creating pitch decks, taking inventory, documenting system processes. Key skills used were time management, documentation, copy writing, and inventory tracking.",2015-11-16,2016-04-15,"$35,000.00","$35,000.00",Kara Orr,2,,"133 Mathewson St, Providence, RI 02903",401-621-2324,
+13,Decor Craft Inc,Product Development Assistant,"-Developed new products and pricing
+-Assisted with generating specifications and mock-ups
+-Coordinated the product development timeline with the timelines of other departments
+-Managed acquisition and organization of Production samples
+-Communicated the specifications and product details to manufacturers and suppliers",,2015-08-31,2015-11-13,"$35,000.00","$35,000.00",Kara Orr,null,null,"133 Mathewson St, Providence, RI 02903",401-621-2324,
+12,Teespring Inc,Design Support Agent,"-Assisted customers with the navigation and use of Teespring.com
+-Vectorized customer designs.
+-Redesigned customer images to comply with Silk-Screen printing standards.
+-Altered customer designs
+-Managed Customer expectations of Print times and quality
+-Explained Silk-Screen printing to customers and Co-workers
+-Assisted Production Team with last minute Corrections.
+-Assisted Production with work overflow",,2014-10-01,2015-08-01,$15.00,$15.00,Heather Auxier,7,,"460 Bryant St, Ste 200, San Francisco, CA 94107",855-833-7774,
+11,Cumberland Public Library,Information Specialist,"-Assisted patrons in locating print and non-print resources.
+-Assisted patrons with research materials.
+-Designed and created displays to enhance library environment.
+-Monitored patron use of the library.
+-Shelved library materials.
+-Screened calls and resolved general questions in regards to library operations and procedures.
+-Maintained organization of library materials",,2014-07-01,2014-12-01,$11.00,$11.00,null,null,null,"1464 Diamond Hill Rd, Cumberland, RI 02864",401-333-2552,
+10,North Providence Library,Reference Associate,"- Assisted patrons in the location of print and non-print resources.
+- Checked books and materials in and out to patrons using the computerized circulation system.
+- Maintained records of overdue books, lost books, and fines.
+- Monitored patron use of the library.
+- Shelved library materials.
+- Screened calls and resolved general questions in regards to library operations and procedures.
+- Conducted one on one lessons on computer use.
+- Processed books and other materials for general use.
+- Assisted with computer problems experienced by patrons.",,2010-12-01,2014-10-01,$10.50,$11.20,Barbara Neri,8,," 1810 Mineral Spring Ave, North Providence, RI 02904",401-353-5600,
+9,US Census Bureau,Enumerator,"- Planned work by reviewing assignment area to determine organization of neighborhoods and
+locate households for conducting interviews.
+- Conducted interviews with residents in assigned areas by following stringent guidelines and
+confidentiality laws.
+- Explained the purpose of the census interview, answered residents' questions, elicited information
+following a script, and recorded census data on forms.
+- Complied with accuracy standards while maintaining high production rates.
+- Met daily with supervisor to review and submit work, and receive additional instructions.",,2010-05-01,2010-07-01,$10.00,$10.00,null,null,null,"1 W Exchange St, Providence, RI 02903",401-528-5104,
+8,Barnes & Noble College (PC Bookstore),Store Associate,"- Assisted customers with finding and deciding what they need.
+- Organized and stocked book displays.
+- Addressed any concerns and questions the customers had.
+- Maintained store cleanliness.",,2010-09-01,2010-12-01,$8.20,$8.20,null,null,null,"1 Cunningham Square, Providence, RI 02908",401-865-2181,
+7,K C Marketing Services,Sales Rep,"- Promoted products at field events.
+- Designed product displays.
+- Handled any sales interactions with potential customers including cash transactions.
+- Addressed any concerns and questions the customers had.",,2009-05-01,2010-03-01,$9.00,$9.00,null,null,null,"255 Main St, Pawtucket, RI 02860",401-726-9548,
+6,James P Adams Library,Library Associate 1,"- Assisted students and teachers in location of print and non-print resources.
+- Checked books and materials in and out to students and teachers using the computerized
+circulation system.
+- Maintained records of overdue books, lost books, and fines.
+- Monitored student use of the library.
+- Shelved print and non-print materials.
+- Screened calls and resolved general questions in regards to library operations and procedures.",,2008-09-01,2009-05-01,$7.40,$7.40,null,null,null,"600 Mt Pleasant Ave, Providence, RI 02908",401-456-8126,
+5,Bryan Steinberg,Assistant,"- Performed data entry.
+- Landscaped and Managed Estate.
+- Cleaned/ Organized office space, studio space, and home.",,2008-05-01,2008-08-01,$10.00,$10.00,null,null,null,"791 Chestnut Hill Rd, Chepachet, RI 02814",null,
+4,RIC Art Center,Sculpture Studio Assistant ,"- Tracked tool inventory.
+- Assisted students with projects.
+- Oriented students on proper usage and safety of tools.
+- Reinforced studio and personal safety while using power tools.",,2007-05-01,2007-08-01,$7.40,$7.40,null,null,null,"600 Mt Pleasant Ave, Providence, RI 02908",401-456-8054,
+3,Cranston Public Library,Library Assistant,"- Assisted with the creation and organization of summer activities.
+- Helped children find their books.
+- Maintained the stacks; book shelving and shelf reading.
+- Screened calls and resolved general questions in regards to library operations and procedures.",,2006-05-01,2006-08-01,$7.40,$7.40,null,null,null,"140 Sockanosset Cross Rd, Cranston, RI 02920",401-943-9080,
+2,The Met Center,Learning Specialist,"- Assisted students with writing assignments and projects.
+- Mentored student with personal issues.
+- Monitored students for safety.",,2005-01-15,2005-02-21,$9.00,$9.00,null,null,null,"325 Public St, Providence, RI 02905",401-752-2600,
+1,Showcase Cinemas,Concession Associate,"- Assisted customers with Concession selection and purchase.
+- Operated the cash register.
+- Maintained the Concession area (sweeping and wipe downs).",,2002-04-08,2002-04-26,$6.15,$6.15,null,null,null,"100 Commerce Way, Seekonk, MA 02771",800-315-4000,
