@@ -7,6 +7,7 @@
   --third-color: rgb(4, 255, 58); /*third*/
   --trim-color: rgb(14, 149, 143); /*trim*/
   --trim-lt-color: rgb(19, 196, 187); /*trim-lt*/
+  --trim-bg-color: rgb(125, 223, 218); /*trim-bg*/
   --text-color: rgb(0, 0, 0); /*text*/
 }
 #color-notes{
@@ -71,7 +72,7 @@ canvas{
 }
 #divSkills{
   padding-left: 16px !important;
-  background-color: var(--trim-color);
+  background-color: var(--trim-bg-color);
 }
 .inProgress{
   padding-left: 16px !important;
