@@ -1,3 +1,34 @@
+:root {
+  --main-bg-color: brown;
+  --back-color: rgb(222, 252, 253); /*back*/
+  --prime-color: rgb(29, 196, 202); /*prime*/
+  --dark-color: rgb(6, 41, 42); /*dark*/
+  --second-color: rgb(246, 29, 127); /*second*/
+  --third-color: rgb(4, 255, 58); /*third*/
+  --trim-color: rgb(14, 149, 143); /*trim*/
+  --trim-lt-color: rgb(19, 196, 187); /*trim-lt*/
+  --text-color: rgb(0, 0, 0); /*text*/
+}
+#color-notes{
+  color: rgb(43, 48, 58); /*back*/
+  color: rgb(2, 128, 144); /*prime*/
+  color: rgb(15, 24, 39); /*dark*/
+  color: rgb(103, 60, 79); /*second*/
+  color: rgb(127, 85, 125); /*third*/
+  color: rgb(119, 156, 171); /*trim*/
+  color: rgb(255, 255, 255); /*text*/
+}
+#color-notes{
+  color: rgb(43, 48, 58); /*back*/
+  color: rgb(2, 128, 144); /*prime*/
+  color: rgb(15, 24, 39); /*dark*/
+  color: rgb(103, 60, 79); /*second*/
+  color: rgb(127, 85, 125); /*third*/
+  color: rgb(119, 156, 171); /*trim*/
+  color: rgb(159,196,211); /*trim-lt*/
+  color: rgb(255, 255, 255); /*text*/
+
+}
 body {
   font-family: 'Montserrat', 'helvetica', sans-serif;
   width: 80%;
@@ -6,7 +37,7 @@ body {
 }
 
 html{
-  background-color: rgb(127,85,125);
+  background-color: rgb(4, 255, 58);;
 }
 canvas{
   display: none;
@@ -26,10 +57,10 @@ canvas{
 }
 .head{
   padding: 16px;
-  background-color: rgb(43,48,58) !important;
+  background-color: var(--back-color) !important;
   background-position: right top !important;
   background-size: 100% auto !important;
-  color: #fff;
+  color: var(--text-color);
 }
 #sayHi{
   text-align: right;
@@ -40,7 +71,7 @@ canvas{
 }
 #divSkills{
   padding-left: 16px !important;
-  background-color: rgb(149,186,201);
+  background-color: var(--trim-color);
 }
 .inProgress{
   padding-left: 16px !important;
@@ -50,7 +81,7 @@ canvas{
 }
 .footer{
   padding-left: 16px !important;
-  background-color: rgb(119,156,171) !important;
+  background-color: var(--trim-color) !important;
   background-position: left bottom !important;
   background-size: 100% auto !important;
 }
@@ -58,10 +89,10 @@ canvas{
   color: #fff;
 }
 a{
-  color: rgb(103,60,79);
+  color: var(--second-color);
 }
 .lead, .lead:hover{
-  color: rgb(2,128,144);
+  color: var(--prime-color);
 }
 .footer .btn{
   font-size: 20px !important;
@@ -78,11 +109,11 @@ a{
 }
 .total{
   /*display: inline;*/
-  background-color: rgb(159,196,211);
+  background-color: var(--trim-lt-color);
   margin-bottom: 16px;
 }
 .level{
-  background-color:  rgb(119,156,171);
+  background-color:  var(--trim-color);
 }
 #gallery{
   padding-left: 32px;
