@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../../libraries/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="../styles.css">-->
+
+  	<title>my-first-rogue</title>
+
+  	<script src="../../libraries/p5.js"></script>
+  	<script src="../../libraries/p5.dom.js"></script>
+  	<script src="../../libraries/p5.sound.js"></script>
+    <script src="../../libraries/jquery.min.js" ></script>
+    <script src="../../libraries/bootstrap.min.js" ></script>
+    <script src="../classes/Grid.js"></script>
+
+    <script src="sketch.js"></script>
+
+  </head>
+  <body>
+    <div>
+      <a href="../">&lt;my-first-rogue</a>
+    </div>
+
+    <div>
+      <h1>>map-maker</h1>
+    </div>
+    <div id="canvas">
+
+    </div>
+    <div id="input">
+        <div id="radAssets" class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="btnPlayer" checked=""> Player
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="btnWall"> Wall
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="btnBasicEnemy"> Basic Enemy
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="btnEmpty"> Erase
+          </label>
+        </div>
+        <button id="btnGetString" class="btn">Get String</button>
+    </div>
+    <div id="divOutput">
+        <br>
+        <p id="txtStringOut"></p>
+    </div>
+  </body>
+</html>
