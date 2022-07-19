@@ -1,6 +1,6 @@
 class Wall extends Phaser.GameObjects.Sprite{
     constructor(_col,_row,_type,_scene){
-        super(_scene, _col*gameOptions.tileSize, _row*gameOptions.tileSize, 'wall', 0 )
+        super(_scene, _col*gameOptions.tileSize+tileOffset, _row*gameOptions.tileSize+tileOffset, 'wall', 0 )
         this.col = _col;
         this.row = _row;
         this.type = _type;
