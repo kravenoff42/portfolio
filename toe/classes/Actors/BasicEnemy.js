@@ -1,4 +1,4 @@
-class BasicEnemy extends Creature{
+class BasicEnemy extends Actor{
     constructor(_col,_row,_type,_dir,_scene){
         super(_col, _row, _type,'zombie',_dir,_scene)
     }

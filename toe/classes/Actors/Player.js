@@ -1,4 +1,4 @@
-class Player extends Creature{
+class Player extends Actor{
     constructor(_col,_row,_type,_scene){
         super(_col, _row, _type,'player',0,_scene)
     }

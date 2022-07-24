@@ -1,4 +1,4 @@
-class Creature extends Phaser.GameObjects.Sprite{
+class Actor extends Phaser.GameObjects.Sprite{
     constructor(_col, _row, _type,_sprite_name,_dir,_scene){
         super(_scene, _col*gameOptions.tileSize+tileOffset, _row*gameOptions.tileSize+tileOffset, _sprite_name, _dir )
         this.col = _col;
