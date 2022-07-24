@@ -51,6 +51,7 @@ var playGame = new Phaser.Class({
         // this.load.image('zombieD', 'assets/zombieD.png');
         this.load.spritesheet('player', 'assets/player-4dir.png', { frameWidth: 32, frameHeight: 32, endFrame:4 });
         this.load.spritesheet('zombie', 'assets/zombie-4dir.png', { frameWidth: 32, frameHeight: 32, endFrame:4 });
+        this.load.spritesheet('tileSet', 'assets/Full.png', { frameWidth: 32, frameHeight: 32, endFrame:56 });
     },
     create: function(){
         // this.fieldArray = [];

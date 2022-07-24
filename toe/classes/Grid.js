@@ -26,13 +26,17 @@ class Grid{
         return false;
     }
     placeWalls(){
+        let k = 0;
         for(let i = 0;i<this.rows;i++){
             for(let j = 0;j<this.cols;j++){
-                if(Math.random()<DENSITY && !this.occupied(j,i)){
-                    // let dir = Math.floor(Math.random() * 4)
-                    this.objects[j][i]= new Wall(j,i,"WALL",this.scene);
-                    this.wallGroup.add(this.objects[j][i]);
-                }
+
+                this.objects[j][i]= new Wall(j,i,"WALL",k,this.scene);
+                k++;
+                // if(Math.random()<DENSITY && !this.occupied(j,i)){
+                //     // let dir = Math.floor(Math.random() * 4)
+                //     this.objects[j][i]= new Wall(j,i,"WALL",this.scene);
+                //     this.wallGroup.add(this.objects[j][i]);
+                // }
             }
         }
     }
