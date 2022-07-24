@@ -1,11 +1,13 @@
-function NewClass(){
-    
-}
+class NewClass{
+    constructor(){
+        super()
+    }
+    property1;
+    property2 = null;
+    update(){
 
-NewClass.prototype.update = function () {
-    // body...
-}
+    }
+    render(){
 
-NewClass.prototype.render = function () {
-    // body...
+    }
 }
