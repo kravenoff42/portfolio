@@ -52,6 +52,24 @@ var playGame = new Phaser.Class({
         this.load.spritesheet('player', 'assets/player-4dir.png', { frameWidth: 32, frameHeight: 32, endFrame:4 });
         this.load.spritesheet('zombie', 'assets/zombie-4dir.png', { frameWidth: 32, frameHeight: 32, endFrame:4 });
         this.load.spritesheet('tileSet', 'assets/Full.png', { frameWidth: 32, frameHeight: 32, endFrame:56 });
+        this.load.image('diggerD', 'assets/diggerD.png');
+        this.load.image('Grid_dddg', "./assets/tiles/img/Grid_dddg.png");
+        this.load.image('Grid_ddgd', "./assets/tiles/img/Grid_ddgd.png");
+        this.load.image('Grid_ddgg', "./assets/tiles/img/Grid_ddgg.png");
+        this.load.image('Grid_dgdd', "./assets/tiles/img/Grid_dgdd.png");
+        this.load.image('Grid_dgdg', "./assets/tiles/img/Grid_dgdg.png");
+        this.load.image('Grid_dgdg1', "./assets/tiles/img/Grid_dgdg1.png");
+        this.load.image('Grid_dggd', "./assets/tiles/img/Grid_dggd.png");
+        this.load.image('Grid_dggg', "./assets/tiles/img/Grid_dggg.png");
+        this.load.image('Grid_gddd', "./assets/tiles/img/Grid_gddd.png");
+        this.load.image('Grid_gddg', "./assets/tiles/img/Grid_gddg.png");
+        this.load.image('Grid_gdgd', "./assets/tiles/img/Grid_gdgd.png");
+        this.load.image('Grid_gdgd1', "./assets/tiles/img/Grid_gdgd1.png");
+        this.load.image('Grid_gdgg', "./assets/tiles/img/Grid_gdgg.png");
+        this.load.image('Grid_ggdd', "./assets/tiles/img/Grid_ggdd.png");
+        this.load.image('Grid_ggdg', "./assets/tiles/img/Grid_ggdg.png");
+        this.load.image('Grid_gggd', "./assets/tiles/img/Grid_gggd.png");
+        this.load.image('Grid_gggg', "./assets/tiles/img/Grid_gggg.png");
     },
     create: function(){
         // this.fieldArray = [];

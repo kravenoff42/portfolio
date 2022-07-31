@@ -5,11 +5,19 @@ class Grid{
         this.rows = _rows || 10;
         this.enemyGroup = _enemyGroup
         this.wallGroup = _wallGroup
+        this.max_entropy =17;
         for (let i=0,len = _cols; i<len;i++) {
             this.objects.push(new Array(_rows));
             this.objects[i].fill(null);
         }
+        for(let i = 0;i<this.rows;i++){
+            this.cells.push(new Array(_rows));
+            for(let j = 0;j<this.cols;j++){
+                this.cells[i][j]= new Cell(j,i,this.max_entropy);
+            }
+        }
     }
+    cells = [];
     objects = [];
     enemyCount = 0;
     playerCount = 0;
