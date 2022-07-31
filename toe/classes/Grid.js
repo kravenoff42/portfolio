@@ -38,7 +38,8 @@ class Grid{
         for(let i = 0;i<this.rows;i++){
             for(let j = 0;j<this.cols;j++){
 
-                this.objects[j][i]= new Wall(j,i,"WALL",k,this.scene);
+                this.objects[j][i]= new Wall(j,i,"WALL",(k % 56),this.scene);
+                this.scene.add.text(j*gameOptions.tileSize, i*gameOptions.tileSize, (k % 56).toString(), { font: '"Press Start 2P"',color: 'white' });
                 k++;
                 // if(Math.random()<DENSITY && !this.occupied(j,i)){
                 //     // let dir = Math.floor(Math.random() * 4)

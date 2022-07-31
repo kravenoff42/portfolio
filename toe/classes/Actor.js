@@ -1,15 +1,11 @@
-class Actor extends Phaser.GameObjects.Sprite{
+class Actor extends VisibleObject{
     constructor(_col, _row, _type,_sprite_name,_dir,_scene){
-        super(_scene, _col*gameOptions.tileSize+tileOffset, _row*gameOptions.tileSize+tileOffset, _sprite_name, _dir )
-        this.col = _col;
-        this.row = _row;
+        super(_col, _row, _sprite_name, _dir,_scene )
         this.creatureType = _type;
         this.dir = _dir;
         this.setTarget();
         this.scene.add.existing(this);
     }
-    col;
-    row;
     dir = 0;
     sight_range;
     earing_range;
